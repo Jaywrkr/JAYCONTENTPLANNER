@@ -1,0 +1,304 @@
+{
+ "2026-10-14A": {
+  "sticker": "c1014-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Cuántos ‘mañana’ llevas esta semana?",
+   "opts": "1 / Ya perdí la cuenta"
+  },
+  "proceso": "c1014-a-st-proceso.jpg"
+ },
+ "2026-10-14B": {
+  "sticker": "c1014-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué harías con 5 minutos al día?",
+   "opts": ""
+  },
+  "proceso": "c1014-b-st-proceso.jpg"
+ },
+ "2026-10-15A": {
+  "sticker": "c1015-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Viste el cuadrado al final?",
+   "opts": "Sí / No"
+  },
+  "proceso": "c1015-a-st-proceso.jpg"
+ },
+ "2026-10-15B": {
+  "sticker": "c1015-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué dice?",
+   "opts": ""
+  },
+  "proceso": "c1015-b-st-proceso.jpg"
+ },
+ "2026-10-16A": {
+  "sticker": "c1016-a-st-sticker.jpg",
+  "it": {
+   "k": "SLIDER",
+   "q": "¿Cuánto ruido tienes hoy?",
+   "opts": ""
+  }
+ },
+ "2026-10-16B": {
+  "sticker": "c1016-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Cuál es tu hábito aburrido?",
+   "opts": ""
+  }
+ },
+ "2026-10-17A": {
+  "sticker": "c1017-a-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué error ya no repites?",
+   "opts": ""
+  },
+  "proceso": "c1017-a-st-proceso.jpg"
+ },
+ "2026-10-17B": {
+  "sticker": "c1017-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué haces antes de las 8?",
+   "opts": ""
+  },
+  "proceso": "c1017-b-st-proceso.jpg"
+ },
+ "2026-10-18A": {
+  "sticker": "c1018-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Te libera o te duele?",
+   "opts": ""
+  },
+  "proceso": "c1018-a-st-proceso.jpg"
+ },
+ "2026-10-18B": {
+  "sticker": "c1018-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Lo empiezas o lo sueltas?",
+   "opts": ""
+  },
+  "proceso": "c1018-b-st-proceso.jpg"
+ },
+ "2026-10-19A": {
+  "sticker": "c1019-a-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué vas a hacer, sin intentarlo?",
+   "opts": ""
+  },
+  "proceso": "c1019-a-st-proceso.jpg"
+ },
+ "2026-10-19B": {
+  "sticker": "c1019-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Crees en la suerte?",
+   "opts": "Sí / En la constancia"
+  },
+  "proceso": "c1019-b-st-proceso.jpg"
+ },
+ "2026-10-20A": {
+  "sticker": "c1020-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿La encontraste?",
+   "opts": ""
+  },
+  "proceso": "c1020-a-st-proceso.jpg"
+ },
+ "2026-10-20B": {
+  "sticker": "c1020-b-st-sticker.jpg",
+  "it": {
+   "k": "QUIZ",
+   "q": "¿En qué zona está la línea distinta?",
+   "opts": "Arriba / Centro / Abajo"
+  },
+  "proceso": "c1020-b-st-proceso.jpg"
+ },
+ "2026-10-21A": {
+  "sticker": "c1021-a-st-sticker.jpg",
+  "it": {
+   "k": "AÑADE EL TUYO",
+   "q": "Comparte tu tiempo de pantalla de hoy",
+   "opts": ""
+  },
+  "proceso": "c1021-a-st-proceso.jpg"
+ },
+ "2026-10-21B": {
+  "sticker": "c1021-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué haces al día siguiente de un mal día?",
+   "opts": ""
+  },
+  "proceso": "c1021-b-st-proceso.jpg"
+ },
+ "2026-10-22A": {
+  "sticker": "c1022-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Funcionó?",
+   "opts": "Sí / Ahora sí puedo"
+  },
+  "proceso": "c1022-a-st-proceso.jpg"
+ },
+ "2026-10-22B": {
+  "sticker": "c1022-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Cuál es tu excusa favorita?",
+   "opts": ""
+  },
+  "proceso": "c1022-b-st-proceso.jpg"
+ },
+ "2026-10-23A": {},
+ "2026-10-23B": {},
+ "2026-10-24A": {
+  "sticker": "c1024-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Cuál te cuesta más dejar?",
+   "opts": "La 1 / La 2 / La 3"
+  },
+  "proceso": "c1024-a-st-proceso.jpg"
+ },
+ "2026-10-24B": {
+  "sticker": "c1024-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué te preguntas tú cada lunes?",
+   "opts": ""
+  },
+  "proceso": "c1024-b-st-proceso.jpg"
+ },
+ "2026-10-25A": {
+  "sticker": "c1025-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Cuántas veces dijiste ‘estoy ocupado’ esta semana?",
+   "opts": "Pocas / Muchas"
+  },
+  "proceso": "c1025-a-st-proceso.jpg"
+ },
+ "2026-10-25B": {
+  "sticker": "c1025-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué haces cuando nadie te ve?",
+   "opts": ""
+  },
+  "proceso": "c1025-b-st-proceso.jpg"
+ },
+ "2026-10-26A": {
+  "sticker": "c1026-a-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "Voy a.",
+   "opts": ""
+  },
+  "proceso": "c1026-a-st-proceso.jpg"
+ },
+ "2026-10-26B": {
+  "sticker": "c1026-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Cuál le dices más a lo que te salió mal?",
+   "opts": "Fracaso / Intento"
+  },
+  "proceso": "c1026-b-st-proceso.jpg"
+ },
+ "2026-10-27A": {
+  "sticker": "c1027-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿La encontraste?",
+   "opts": ""
+  },
+  "proceso": "c1027-a-st-proceso.jpg"
+ },
+ "2026-10-27B": {
+  "sticker": "c1027-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿La encontraste?",
+   "opts": "Sí / Todavía no"
+  },
+  "proceso": "c1027-b-st-proceso.jpg"
+ },
+ "2026-10-28A": {
+  "sticker": "c1028-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Qué pesa más en tu semana?",
+   "opts": "Lo que hago / Lo que digo"
+  },
+  "proceso": "c1028-a-st-proceso.jpg"
+ },
+ "2026-10-28B": {
+  "sticker": "c1028-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Hoy fue?",
+   "opts": "Ocupado / Enfocado"
+  },
+  "proceso": "c1028-b-st-proceso.jpg"
+ },
+ "2026-10-29A": {
+  "sticker": "c1029-a-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Llegaste al final?",
+   "opts": "Sí / Me fui antes"
+  },
+  "proceso": "c1029-a-st-proceso.jpg"
+ },
+ "2026-10-29B": {
+  "sticker": "c1029-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Ya está?",
+   "opts": "Sí / Ahora voy"
+  },
+  "proceso": "c1029-b-st-proceso.jpg"
+ },
+ "2026-10-30A": {},
+ "2026-10-30B": {},
+ "2026-10-31A": {
+  "proceso": "c1031-a-st-proceso.jpg"
+ },
+ "2026-10-31B": {
+  "sticker": "c1031-b-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué canción te pone a trabajar?",
+   "opts": ""
+  },
+  "proceso": "c1031-b-st-proceso.jpg"
+ },
+ "2026-11-01A": {
+  "sticker": "c1101-a-st-sticker.jpg",
+  "it": {
+   "k": "PREGUNTA",
+   "q": "¿Qué tienes guardado sin publicar?",
+   "opts": ""
+  },
+  "proceso": "c1101-a-st-proceso.jpg"
+ },
+ "2026-11-01B": {
+  "sticker": "c1101-b-st-sticker.jpg",
+  "it": {
+   "k": "ENCUESTA",
+   "q": "¿Lo sabías o lo necesitabas leer?",
+   "opts": ""
+  },
+  "proceso": "c1101-b-st-proceso.jpg"
+ }
+}
