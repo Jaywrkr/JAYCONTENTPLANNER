@@ -412,6 +412,7 @@ async function get(f, quiet) {
   } catch (e) {
     if (e && e.code === 'declined') return false;
     if (e && e.code === 'rate_limited') { toast('Espera un segundo'); return false; }
+    if (!window.claude) { const a = document.createElement('a'); a.href = A(f); a.download = 'jaywrkr-' + f; document.body.appendChild(a); a.click(); a.remove(); if (!quiet) toast('Descargando'); return true; }
     window.open(A(f), '_blank', 'noopener');
     return false;
   }
