@@ -39,7 +39,7 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
 .st .media{margin:14px 0 0 32px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}.st .media::-webkit-scrollbar{height:2px}.st .media::-webkit-scrollbar-thumb{background:var(--fg)}
 .st .media img{height:240px;width:auto;display:block;background:var(--soft);cursor:zoom-in}
 .st .ac{margin:14px 0 0 32px}
-.st{padding:16px 0}.st .hd{cursor:pointer}.st .bd{display:none;padding-bottom:6px}.st.open .bd{display:block}.st.ok h3{color:var(--dim)}.st .ck{font-size:14px;width:18px;text-align:right}.st.ok .ck{color:var(--fg)}.st:not(.ok) .ck{color:var(--dim)}.st.open h3{color:var(--fg)}
+.st{padding:16px 0}.chip{display:inline-flex;align-items:center;gap:0;border:1px solid currentColor;font-size:9.5px;letter-spacing:.1em;padding:2px 5px;margin-right:10px;vertical-align:3px;font-weight:400;color:var(--dim)}.chip i{display:inline-block;width:1px;height:9px;background:currentColor;margin:0 5px;opacity:.6}.hr{font-size:11px;letter-spacing:.1em;color:var(--dim);margin-left:10px;vertical-align:2px}.cb.now .ch b::after{content:'';display:inline-block;width:7px;height:7px;background:var(--fg);margin-left:10px;vertical-align:4px}.st .hd{cursor:pointer}.st .bd{display:none;padding-bottom:6px}.st.open .bd{display:block}.st.ok h3{color:var(--dim)}.st .ck{font-size:14px;width:18px;text-align:right}.st.ok .ck{color:var(--fg)}.st:not(.ok) .ck{color:var(--dim)}.st.open h3{color:var(--fg)}
 .daydone{text-align:center;padding:40px 0;color:var(--dim)}.daydone h3{color:var(--fg);font-weight:300;font-size:22px;margin-bottom:6px}
 .c0 .prev img{max-height:380px;width:auto;margin:0 auto}
 @media(max-width:900px){.cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.cols::-webkit-scrollbar{display:none}
@@ -470,7 +470,7 @@ function flow(d, o) {
   add(0, 'h1', 'Historia 1', 'Comparte el post: avión → Agregar a tu historia.', [], []);
   if (o.wall) { add(1, 'w1', 'Historia 2 · fondo de bloqueo', 'Texto: “captura esta.”', [o.wall.lock], [['Bloqueo', 'dl', o.wall.lock]]); add(1, 'w2', 'Historia 3 · fondo de inicio', 'Texto: “y esta.” Luego agrégalas a FONDOS.', [o.wall.home], [['Inicio', 'dl', o.wall.home]]); }
   if (k.sticker) { const st = (o.st || []).find(x => /sticker/i.test(x)) || ''; add(1, 'h2', 'Historia 2 · sticker', clean(st).replace(/^sube la imagen “Sticker” \(abajo\) y /, ''), [k.sticker], [['Fondo del sticker', 'dl', k.sticker]]); }
-  if (o.yt) add(1, 'yt', 'YouTube Short', 'Súbelo con música de la biblioteca de YouTube.', [o.short === o.video ? o.poster : (o.short || '').replace('.mp4', '-poster.jpg')], [['Short', 'dl', o.short || o.video], ['Copiar título', 'copy', o.yt.title], ['Copiar descripción', 'copy', o.yt.desc]]);
+  if (o.yt) add(1, 'yt', 'Short', 'El mismo video en YouTube Shorts y TikTok.\nShorts: música de la biblioteca de YouTube.\nTikTok: sonido en tendencia al 5% · súbelo desde este archivo, nunca descargado de Instagram.', [o.short === o.video ? o.poster : (o.short || '').replace('.mp4', '-poster.jpg')], [['Short', 'dl', o.short || o.video], ['Copiar título', 'copy', o.yt.title], ['Copiar descripción', 'copy', o.yt.desc], ['Copiar texto TikTok', 'copy', o.yt.title + '\n\n#jaywrkr #hábitos #disciplina #minimalismo']]);
   if (k.proceso) add(2, 'h3', 'Historia 3 · detrás del post', 'Súbela y guárdala en PROCESO.', [k.proceso], [['Detrás del post', 'dl', k.proceso]]);
   const ex = d.extra;
   if (ex) {
@@ -479,6 +479,11 @@ function flow(d, o) {
   }
   if (YL && YL.kind === 'rec') add(2, 'rec', 'Graba la voz · episodio ' + YL.ep, YL.title + '\n' + YL.sub + '\n\n' + YL.script, [], [['Copiar guion', 'copy', YL.script]]);
   add(2, 'cm', 'Responde comentarios', 'Una línea a cada uno. Incluye a quien compartió por DM.', [], []);
+  // chip de plataforma + títulos cortos
+  const CH = { li: 'LI', tx: 'TH X', ig: 'IG', h1: 'IG', h2: 'IG', h3: 'IG', w1: 'IG', w2: 'IG', ex: 'IG', cm: 'IG', yt: 'YT TT', rec: 'YT', y1: 'YT', y2: 'YT', y3: 'YT', y4: 'YT', y5: 'YT', y6: 'YT', y7: 'YT', y8: 'YT IG' };
+  const TT = { li: 'Post', tx: 'Frase', ig: 'Post', h1: 'Historia 1', h3: 'Historia 3 · proceso', cm: 'Responde comentarios', y1: 'Sube el video', y2: 'Título y descripción', y3: 'Miniaturas A/B/C', y4: 'Playlist y detalles', y5: 'Subtítulos', y6: 'Pantalla final', y7: 'Programa', y8: 'Comentario + historia' };
+  const HR = { ig: '11:30', y7: '11:30' };
+  S.forEach(x => { x.ch = CH[x.id] || ''; x.t = TT[x.id] || x.t.replace(/^(YouTube|Instagram) · /, '').replace(/ · \d\d:\d\d$/, ''); x.hr = HR[x.id] || ''; });
   return S;
 }
 const fkey = d => d.date + ':flow';
@@ -488,10 +493,10 @@ function blocksRender(d, o) {
   const S = flow(d, o), done = state.steps[fkey(d)] || [], C = $('cols'), keep = [...C.querySelectorAll('.col')].map(c => c.scrollTop);
   let h = '';
   BL.forEach(([n, hr], b) => { const st = S.filter(x => x.b === b), ok = st.filter(x => done.includes(x.id)).length;
-    h += `<section class="col cb"><div class="ch"><div class="r"><b><i>0${b + 2}</i>${n}</b><span class="lab">${st.length ? (ok === st.length ? '✓' : ok + ' / ' + st.length) : ''}</span></div><div class="lab" style="margin-top:4px">${hr}</div><div class="bar"><i style="width:${st.length ? ok / st.length * 100 : 0}%"></i></div></div>`;
+    h += `<section class="col cb ${isToday(cur) && b === (new Date().getHours() < 12 ? 0 : new Date().getHours() < 18 ? 1 : 2) ? 'now' : ''}"><div class="ch"><div class="r"><b><i>0${b + 2}</i>${n}</b><span class="lab">${st.length ? (ok === st.length ? '✓' : ok + ' / ' + st.length) : ''}</span></div><div class="lab" style="margin-top:4px">${hr}</div><div class="bar"><i style="width:${st.length ? ok / st.length * 100 : 0}%"></i></div></div>`;
     if (!st.length) h += `<div class="daydone">Nada en este bloque.<br>simple.</div>`;
     st.forEach((x, j) => { const k = done.includes(x.id);
-      h += `<div class="st ${k ? 'ok' : ''} ${OPEN.has(x.id) ? 'open' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${esc(x.t)}</h3><span class="ck">${k ? '✓' : '○'}</span></div><div class="bd">
+      h += `<div class="st ${k ? 'ok' : ''} ${OPEN.has(x.id) ? 'open' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${x.ch ? `<span class="chip">${x.ch.split(' ').join('<i></i>')}</span>` : ''}${esc(x.t)}${x.hr ? `<span class="hr">${x.hr}</span>` : ''}</h3><span class="ck">${k ? '✓' : '○'}</span></div><div class="bd">
         ${x.sub ? `<div class="sb">${esc(x.sub).replace(/~~(.+?)~~/g, '<s>$1</s>').replace(/(https:\/\/claude\.ai\/artifact\/[A-Za-z0-9]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:inherit">abrir ↗</a>')}</div>` : ''}
         ${x.media.length ? `<div class="media">${x.media.map(f => `<img src="${A(f)}" alt="" loading="lazy">`).join('')}</div>` : ''}
         <div class="ac">${x.acts.map(([l, kk], i) => `<button class="btn mt8" data-a="${i}"><span>${l}</span><span>${kk === 'copy' ? '⧉' : '↓'}</span></button>`).join('')}
