@@ -446,6 +446,8 @@ function flow(d, o) {
   const S = [], OT = d.otras || {}, k = o.kit || {}, add = (b, id, t, sub, media, acts) => S.push({ b, id, t, sub, media: media || [], acts: acts || [] });
   if (OT.li) add(0, 'li', 'LinkedIn', 'Publica la imagen con este texto.', [OT.li.img], [['Imagen', 'dl', OT.li.img], ['Copiar texto', 'copy', OT.li.text]]);
   if (OT.tx) add(0, 'tx', 'Threads y X', OT.tx, [], [['Copiar texto', 'copy', OT.tx]]);
+  const YL = d.ytl;
+  if (YL && YL.kind === 'pub') add(0, 'ytl', 'YouTube · episodio ' + YL.ep + ' · 11:30', YL.title + '\n' + YL.sub, [YL.thumb], [['Miniatura', 'dl', YL.thumb], ['Copiar título', 'copy', YL.title], ['Copiar descripción', 'copy', YL.desc], ['Copiar comentario fijado', 'copy', YL.pin]]);
   const post = o.video ? [o.video] : o.files;
   add(0, 'ig', 'Publica en Instagram · 11:30', o.fmt, o.video ? [o.poster] : o.files.slice(0, 5),
     [...(o.video ? [['Reel', 'dl', o.video]] : o.files.length > 1 ? [['Las ' + o.files.length + ' slides', 'dlall', o.files]] : [['Imagen', 'dl', o.files[0]]]), ['Copiar caption', 'copy', o.cap]]);
@@ -459,6 +461,7 @@ function flow(d, o) {
     const files = (ex.groups || []).flatMap(g => g.files);
     add(2, 'ex', ex.title, ex.steps.join('\n'), files.slice(0, 9).concat(ex.files || []), [...(files.length ? [['Las ' + files.length + ' historias', 'dlall', files]] : []), ...(ex.files || []).map(f => ['Portada', 'dl', f])]);
   }
+  if (YL && YL.kind === 'rec') add(2, 'rec', 'Graba la voz · episodio ' + YL.ep, YL.title + '\n' + YL.sub + '\n\n' + YL.script, [], [['Copiar guion', 'copy', YL.script]]);
   add(2, 'cm', 'Responde comentarios', 'Una línea a cada uno. Incluye a quien compartió por DM.', [], []);
   return S;
 }

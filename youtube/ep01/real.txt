@@ -1,0 +1,58 @@
+0|eq0|Mañana empiezo.|Mañana empiezo
+0|words|Lo has dicho. Yo también.|los dichos bastantes veces, no yo también
+0|key:nunca|Y casi nunca empieza.|y casi nunca empiezas
+0|todos|Le pasa a todos.|Le pasa, creo que a todos
+0|strike:flojera|no es flojera.|y no es pereza, no no es flojera
+0|inv|es algo más simple.|Es algo mucho más sencillo, mucho más simple
+1|words|Nadie decide no hacerlo.|Nadie, como tal, creo que decide no hacerlo
+1|key:hoy|Solo decides no hacerlo hoy.|Solo decides de una u otra forma no hacerlo hoy
+1|cal|el único día que cuenta.|Pero hoy Es una palabra que sería la única o el único lugar o el único día que cuenta
+1|type|haz la cuenta.|Haz cuentas, digamos
+1|words|una cosa pendiente cada semana.|Imaginémonos que dejas una cosa pendiente cada semana
+1|grid52|En un año son 52.|En un año son 52
+1|grid52e|52 cosas que no pasaron.|Así que tendrás 52 cosas que no pasaron, que pospusiste
+1|strike:fallaste>pospusiste|no es que fallaste.|que como tal no es que fallaste 52 veces, ni tú tampoco sientes que fallaste 52 veces
+1|words|cada vez dijiste lo mismo.|Simplemente cada vez dijiste lo mismo de siempre
+1|stack|Mañana.|Mañana
+2|strike:un día>una palabra|mañana es|Y como tal mañana no es un día, es una palabra
+2|strike:mañana>hoy|cuando llega|es una palabra que cuando llega mágicamente se transforma en hoy
+2|ganas|las mismas ganas de siempre.|Y esa palabra hoy vas a tener en esa palabra hoy las mismas ganas de siempre
+2|inv|pocas. o nulas.|Pocas. o nulas
+2|wait|esperando las ganas|Así que si esperas que las ganas lleguen, no no van a llegar
+2|eqg|Las ganas llegan cuando ya empezaste.|Las ganas llegan cuando ya empezaste
+2|list|haciendo. creciendo. creando. avanzando.|cuando ya sientes que estás haciendo, creciendo, creando, avanzando
+3|inv|ahora sí: lo que pasa.|Ahora sí, lo que pasa
+3|bar1|hoy no duele.|si lo dejas para mañana, hoy no duele
+3|bar2|duele después.|Duele después
+3|choice|tu cabeza elige.|Y tu cabeza siempre elige lo que no duele ahora se protege
+3|strike:defecto>normal|no es un|Y no es un defecto tuyo, es así estamos creados
+3|todos|Nos pasa a todos.|nos pasa a todos
+3|split1|hacerlo cuesta hoy.|Hacerlo cuesta hoy
+3|split2|no hacerlo cuesta en un año.|no hacerlo cuesta en un año o dos o tres
+3|inv|hoy siempre gana.|Hoy siempre se busca el cerebro y la cabeza ganar
+3|will|la voluntad no alcanza.|Por eso la voluntad no alcanza. Lamentablemente es así, no alcanza
+3|step|un inicio más fácil.|Lo que sí funciona o lo que tienes que intentar crear es un inicio más fácil
+4|strike:todo>hoy|no tienes que hacerlo|Y cuando digo un inicio más fácil, no digo que tienes que hacerlo todo de buenas a primeras
+4|key:hoy|empieza hoy.|Tienes que simplemente empezar hoy, hacerlo hoy
+4|count5|cinco minutos cuentan.|Cinco minutos cuentan
+4|page|una página cuenta.|una página, cuenta del libro
+4|msg|ese mensaje cuenta.|o ese mensaje, ese correo que tenías que enviar, cuenta
+4|eq5|5 min al día|Cinco minutos al día son más de un día completo al año
+4|type|una frase que me encanta:|Así que piensa esta frase, siempre me ha encantado y dice
+4|vs|lo pequeño que haces le gana a lo grande que pospones.|lo pequeño que haces, le gana a lo grande que pospones
+5|words|piensa en algo que siempre dejas para mañana.|Entonces, piensa en algo que siempre dejas para mañana
+5|grow|solo una cosa.|Solo una cosa, pensemos en una cosa que siempre pospones
+5|timer|hazla cinco minutos.|Ahora, hazla cinco minutos
+5|strike:mañana>hoy|no mañana.|Oye, no mañana, cinco minutos
+5|opts|cinco minutos.|No te pido 10, no te pido 15, una hora, cinco minutos
+5|words|si quieres más, sigues.|Si quieres más, sigues, ok, perfecto
+5|check|si no, ya empezaste.|Si no, ya empezaste
+5|inv|y eso era lo difícil.|Y eso era lo que no había pasado. Y eso era lo difícil
+5|days|todos tus hoy.|Y piensa que ese hoy mañana será hoy y tienes que comprometerte a mínimo esos cinco minutos hacerlos todos tus hoys de tu vida
+6|type|una pregunta.|Así que solo te dejo una pregunta y es sencilla
+6|words36|¿hay algo que llevas más de un mes posponiendo?|Hay algo que llevas más de un mes dejando posponiendo para mañana
+6|qa|deja un sí en los comentarios.|si es que sí, deja aquí los comentarios, sí
+6|words|qué es, lo sabes tú.|no me digas qué. Qué es A la final tú lo sabrás
+7|eq0|mañana|Mañana más mañana, más mañana, es igual a nunca
+7|eqh|hoy|Hoy más hoy, más hoy, más hoy
+7|end|simple.|Es algo simple
