@@ -13,7 +13,7 @@ Por qué posponer nos pasa a todos, y cómo romperlo hoy con 5 minutos.
 3:44 Una pregunta
 4:03 Simple
 
-Una verdad incómoda cada dos semanas, explicada simple.
+Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
 EP2="""[00:00]
 Fallaste un día.
@@ -67,7 +67,7 @@ Solo el número.
 Un mal día es un día.
 Dos son el inicio de dejarlo.
 Simple.
-Nos vemos en dos semanas."""
+Nos vemos la próxima semana."""
 
 TAGS='procrastinación, posponer, hábitos, productividad, disciplina, empezar hoy, jaywrkr'
 def pub_steps(E):
@@ -77,18 +77,29 @@ def pub_steps(E):
    {'b':0,'id':'y2','t':'YouTube · título y descripción','sub':E['title'],'acts':[['Copiar título','copy',E['title']],['Copiar descripción','copy',E['desc']]]},
    {'b':0,'id':'y3','t':'YouTube · miniaturas A/B/C','sub':'Miniatura → Probar y comparar → Thumbnail only. Sube A, B y C. Título fijo.','media':[A('-a.jpg'),A('-b.jpg'),A('-c.jpg')],'acts':[['Las 3 miniaturas','dlall',[A('-a.jpg'),A('-b.jpg'),A('-c.jpg')]]]},
    {'b':0,'id':'y4','t':'YouTube · playlist y detalles','sub':'Playlist: Verdades incómodas (orden: más antiguo primero).\nNo es contenido para niños · sin restricción de edad.\nMostrar más → idioma Español · categoría Educación · etiquetas.','acts':[['Copiar etiquetas','copy',TAGS]]},
-   {'b':0,'id':'y5','t':'YouTube · subtítulos','sub':'Elementos del video → Subtítulos → Español → Subir archivo → Con tiempos.','acts':[['Subtítulos .srt','dl',A('.srt')]]},
-   {'b':0,'id':'y6','t':'YouTube · pantalla final','sub':'Plantilla 1 video + suscribirse. Video: "El mejor para el espectador" sobre el recuadro izquierdo, suscribirse a la derecha. Desde '+E.get('endAt','4:08')+' hasta el final.'},
+   {'b':0,'id':'y5','t':'YouTube · subtítulos','sub':'Elementos del video → Subtítulos → Español → Subir archivo → Con tiempos.'+('' if E.get('srt',True) else ' El archivo .srt te llega en el chat con el video.'),'acts':[['Subtítulos .srt','dl',A('.srt')]] if E.get('srt',True) else []},
+   {'b':0,'id':'y6','t':'YouTube · pantalla final','sub':'Plantilla 1 video + suscribirse. Video: "El mejor para el espectador" sobre el recuadro izquierdo, suscribirse a la derecha. Desde '+E.get('endAt','el minuto que te indico en el chat')+' hasta el final.'},
    {'b':0,'id':'y7','t':'YouTube · programa 11:30','sub':'Visibilidad → Programar → hoy 11:30 (o Público si ya pasó la hora).'},
    {'b':2,'id':'y8','t':'YouTube · comentario fijado + historia','sub':'Comenta y fija. Después sube una historia en Instagram con la miniatura y el sticker de enlace al video.','media':[A('-a.jpg')],'acts':[['Copiar comentario','copy',E['pin']]]},
   ]
   return E
 
-EP1={'kind':'pub','ep':'01','title':'Mañana + mañana + mañana = nunca','thumb':'yt-ep01.jpg','desc':EP1_DESC,
+EP1={'endAt':'4:08','kind':'pub','ep':'01','title':'Mañana + mañana + mañana = nunca','thumb':'yt-ep01.jpg','desc':EP1_DESC,
   'pin':'¿Hay algo que llevas más de un mes posponiendo para mañana? Solo responde: sí.',
   'sub':'Sube el video que te mandé en el chat (ep01-youtube.mp4). Público · no es para niños · idioma español · categoría Educación. Pantalla final: un video + suscribirse sobre los dos recuadros. Luego fija el comentario y sube una historia con el link.'}
 D['2026-10-20']['ytl']=pub_steps(EP1)
-D['2026-10-27']['ytl']={'kind':'rec','ep':'02','title':'Un mal día no es un mal mes','script':EP2,
-  'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 3 de noviembre.'}
+EP2_DESC="""Fallaste un día y ya sientes que perdiste el mes.
+Por qué un mal día no es un mal mes, y la única regla que necesitas.
+
+(capítulos: te llegan en el chat con el video)
+
+Una verdad incómoda cada semana, explicada simple.
+Instagram: @jaywrkr"""
+D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'Un mal día no es un mal mes','script':EP2,
+  'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
+D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'Un mal día no es un mal mes','desc':EP2_DESC,
+  'pin':'¿Cuántas veces dejaste algo después de un solo día malo? Escribe el número.'})
+D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Será sobre el post que mejor funcionó esta semana.)',
+  'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')
