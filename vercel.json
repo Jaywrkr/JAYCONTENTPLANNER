@@ -1,6 +1,13 @@
 {
   "rewrites": [
     { "source": "/c/:path*", "destination": "/app/c/:path*" },
+    { "source": "/manifest.webmanifest", "destination": "/app/manifest.webmanifest" },
+    { "source": "/sw.js", "destination": "/app/sw.js" },
+    { "source": "/icon-:size.png", "destination": "/app/icon-:size.png" },
     { "source": "/", "destination": "/app/index.html" }
+  ],
+  "headers": [
+    { "source": "/sw.js", "headers": [{ "key": "cache-control", "value": "no-cache" }, { "key": "service-worker-allowed", "value": "/" }] },
+    { "source": "/", "headers": [{ "key": "cache-control", "value": "no-cache" }] }
   ]
 }

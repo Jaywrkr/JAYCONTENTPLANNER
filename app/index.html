@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Jay Contenido</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="contenido">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
@@ -120,6 +125,23 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
 .c0 .prev img{max-height:380px;width:auto;margin:0 auto}
 @media(max-width:900px){.cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.cols::-webkit-scrollbar{display:none}
 .col{flex:0 0 100%;scroll-snap-align:start;padding:0 2px 40px!important;border-right:0}}
+
+.tabs{display:none}
+.st .ck{cursor:pointer;width:44px;height:44px;margin:-12px -12px -12px 0;display:flex;align-items:center;justify-content:center;font-size:17px}
+.st .ck:hover{color:var(--fg)}
+.st.sel{outline:1px solid var(--fg);outline-offset:4px}
+.keys{margin-top:28px;font-size:10px;letter-spacing:.1em;color:var(--dim);line-height:2;text-transform:uppercase}.keys b{font-weight:400;color:var(--fg);border:1px solid var(--rule);padding:1px 5px;margin-right:4px}
+@media(max-width:900px){
+ .keys{display:none}
+ .cols{height:calc(100dvh - 128px - 62px - env(safe-area-inset-bottom));min-height:0}
+ .tabs{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--fg);padding-bottom:env(safe-area-inset-bottom)}
+ .tabs button{background:none;border:0;color:var(--dim);font:inherit;padding:10px 0 12px;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;cursor:pointer}
+ .tabs b{font-weight:400;font-size:13px}.tabs span{font-size:10px;letter-spacing:.1em}
+ .tabs button.on{color:var(--fg)}.tabs button.on::before{content:'';position:absolute;top:-1px;left:22%;right:22%;height:3px;background:var(--fg)}
+ .tabs button.now b::after{content:'';display:inline-block;width:5px;height:5px;background:currentColor;margin-left:6px;vertical-align:3px}
+ body{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+ .st h3{font-size:17px}
+}
 .dots{display:none}@media(max-width:900px){.dots{display:flex;justify-content:center;gap:8px;padding:10px 0}.dots button{width:22px;height:2px;border:0;background:var(--rule);padding:0}.dots button.on{background:var(--fg)}}
 .fl{margin-top:28px}.fl .bh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--fg);padding-bottom:8px}
 .fl .bh b{font-weight:400;font-size:15px}.fl .bh b i{font-style:normal;color:var(--dim);margin-right:10px;font-size:12px}
@@ -192,7 +214,7 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
       <button class="arrow" id="next" aria-label="Día siguiente">→</button>
     </div>
     <div class="rule"></div>
-    <div class="dots" id="dots"><button class="on"></button><button></button><button></button><button></button></div><div class="cols" id="cols"><section class="col c0"><div class="ch"><div class="r"><b><i>01</i>Del día</b></div><div class="lab" style="margin-top:4px">post · opción A / B</div><div class="bar"></div></div>
+    <nav class="tabs" id="tabs"><button data-i="0"><b>Día</b><span id="tb0"></span></button><button data-i="1"><b>Mañana</b><span id="tb1"></span></button><button data-i="2"><b>Tarde</b><span id="tb2"></span></button><button data-i="3"><b>Noche</b><span id="tb3"></span></button></nav><div class="cols" id="cols"><section class="col c0"><div class="ch"><div class="r"><b><i>01</i>Del día</b><span class="lab" id="dProg"></span></div><div class="lab" style="margin-top:4px">post · opción A / B</div><div class="bar"></div></div>
     <div class="meta"><span class="lab" id="mDia"></span><span class="lab" id="mSemana"></span></div>
     <div class="lab serie" id="mSerie"></div>
     <h1 id="title"></h1>
@@ -206,7 +228,7 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
     <div class="prev" id="prev0"></div>
 
     <div class="status" id="status"></div>
-    <ol class="blocks hidden" id="blocks"></ol>
+    <div class="keys"><b>← →</b>días · <b>j k</b>pasos · <b>enter</b>abrir<br><b>x</b>hecho · <b>c</b>copiar · <b>d</b>descargar · <b>2 3 4</b>bloque</div><ol class="blocks hidden" id="blocks"></ol>
 
     <details class="todo" id="todo"><summary>Ver todo el día <span>+</span></summary>
     <button class="btn mt8" id="pick"></button>
@@ -565,36 +587,67 @@ function flow(d, o) {
 const fkey = d => d.date + ':flow';
 let OPENDAY = null;
 function blocksRender(d, o) {
-  if (OPENDAY !== d.date) { OPEN.clear(); OPENDAY = d.date; }
+  const FIRST = OPENDAY !== d.date;
+  if (FIRST) { OPEN.clear(); SEL = null; OPENDAY = d.date; }
   const S = flow(d, o), done = state.steps[fkey(d)] || [], C = $('cols'), keep = [...C.querySelectorAll('.col')].map(c => c.scrollTop);
   let h = '';
   BL.forEach(([n, hr], b) => { const st = S.filter(x => x.b === b), ok = st.filter(x => done.includes(x.id)).length;
     h += `<section class="col cb ${isToday(cur) && b === (new Date().getHours() < 12 ? 0 : new Date().getHours() < 18 ? 1 : 2) ? 'now' : ''}"><div class="ch"><div class="r"><b><i>0${b + 2}</i>${n}</b><span class="lab">${st.length ? (ok === st.length ? '✓' : ok + ' / ' + st.length) : ''}</span></div><div class="lab" style="margin-top:4px">${hr}</div><div class="bar"><i style="width:${st.length ? ok / st.length * 100 : 0}%"></i></div></div>`;
     if (!st.length) h += `<div class="daydone">Nada en este bloque.<br>simple.</div>`;
     st.forEach((x, j) => { const k = done.includes(x.id);
-      h += `<div class="st ${k ? 'ok' : ''} ${OPEN.has(x.id) ? 'open' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${x.ch ? `<span class="chip">${x.ch.split(' ').join('<i></i>')}</span>` : ''}${esc(x.t)}${x.hr ? `<span class="hr">${x.hr}</span>` : ''}</h3><span class="ck">${k ? '✓' : '○'}</span></div><div class="bd">
+      h += `<div class="st ${k ? 'ok' : ''} ${OPEN.has(x.id) ? 'open' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${x.ch ? `<span class="chip">${x.ch.split(' ').join('<i></i>')}</span>` : ''}${esc(x.t)}${x.hr ? `<span class="hr">${x.hr}</span>` : ''}</h3><span class="ck" data-ck="1" title="marcar hecho">${k ? '✓' : '○'}</span></div><div class="bd">
         ${x.sub ? `<div class="sb">${esc(x.sub).replace(/~~(.+?)~~/g, '<s>$1</s>').replace(/(https:\/\/claude\.ai\/artifact\/[A-Za-z0-9]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:inherit">abrir ↗</a>')}</div>` : ''}
         ${x.media.length ? `<div class="media">${x.media.map(f => `<img src="${A(f)}" alt="" loading="lazy">`).join('')}</div>` : ''}
         <div class="ac">${x.acts.map(([l, kk], i) => `<button class="btn mt8" data-a="${i}"><span>${l}</span><span>${kk === 'copy' ? '⧉' : '↓'}</span></button>`).join('')}
         <button class="btn ${k ? '' : 'solid'} mt8" data-ok="1"><span>${k ? 'Hecho · deshacer' : 'Hecho'}</span><span>${k ? '↺' : '✓'}</span></button></div></div></div>`; });
     if (b === 2 && S.length && S.every(x => done.includes(x.id))) h += `<div class="daydone"><h3>Día completo.</h3>simple.</div>`;
     h += '</section>'; });
+  if (FIRST) { const nb = isToday(cur) ? (new Date().getHours() < 12 ? 0 : new Date().getHours() < 18 ? 1 : 2) : 0, dn = state.steps[fkey(d)] || [], nx = S.find(z => z.b === nb && !dn.includes(z.id)) || S.find(z => !dn.includes(z.id)); if (nx) { if (matchMedia('(min-width:901px)').matches) OPEN.add(nx.id); SEL = nx.id; }
+    if (isToday(cur)) requestAnimationFrame(() => goTab(nb + 1, false)); else requestAnimationFrame(() => goTab(0, false)); }
+  h = h.replace(/class="st /g, 'class="st ');
   $('flow').innerHTML = h; $('flow')._S = S;
+  if (SEL) { const el = $('flow').querySelector(`.st[data-id="${SEL}"]`); if (el) el.classList.add('sel'); }
+  { const dn = state.steps[fkey(d)] || []; $('dProg').textContent = S.filter(z => dn.includes(z.id)).length + ' / ' + S.length;
+    BL.forEach((_, b) => { const st = S.filter(z => z.b === b), ok = st.filter(z => dn.includes(z.id)).length, el = $('tb' + (b + 1)); if (el) el.textContent = st.length ? (ok === st.length ? '✓' : ok + '/' + st.length) : '—'; });
+    $('tb0').textContent = state.picks[d.date] ? state.picks[d.date] : 'A/B';
+    [...$('tabs').children].forEach((t, i) => t.classList.toggle('now', isToday(cur) && i === (new Date().getHours() < 12 ? 0 : new Date().getHours() < 18 ? 1 : 2) + 1)); }
   [...C.querySelectorAll('.col')].forEach((c, i) => { if (keep[i] != null) c.scrollTop = keep[i]; });
 }
+function toggleDone(d, x) {
+  const k = fkey(d), a = state.steps[k] || [], was = a.includes(x.id); if (!state.picks[d.date]) state.picks[d.date] = opt;
+  state.steps[k] = was ? a.filter(z => z !== x.id) : a.concat(x.id); if (x.id === 'ig') { if (was) delete state.done[d.date]; else state.done[d.date] = true; }
+  if (!was) { const wasOpen = OPEN.has(x.id); OPEN.delete(x.id); const S = $('flow')._S, nx = S.slice(S.indexOf(x) + 1).find(z => z.b === x.b && !state.steps[k].includes(z.id)); if (nx && wasOpen) OPEN.add(nx.id); if (SEL === x.id && nx) SEL = nx.id; }
+  try { navigator.vibrate && navigator.vibrate(8); } catch (e) {}
+  save(); render();
+}
+let SEL = null;
 $('flow').onclick = async e => {
   const st = e.target.closest('.st'); if (!st) return; const btn = e.target.closest('button');
   const d = PLAN[cur], x = $('flow')._S.find(z => z.id === st.dataset.id), k = fkey(d), a = state.steps[k] || [];
   if (btn && btn.dataset.a != null) { const [, kind, v] = x.acts[+btn.dataset.a]; if (kind === 'copy') copy(v); else if (kind === 'dlall') { for (const f of v) { if (!(await get(f, true))) break; } } else get(v); return; }
   const was = a.includes(x.id);
+  if (e.target.closest('[data-ck]')) { toggleDone(d, x); return; }
   if (!btn && e.target.closest('.hd')) { OPEN.has(x.id) ? OPEN.delete(x.id) : OPEN.add(x.id); render(); return; }
-  if (btn && btn.dataset.ok) { if (!state.picks[d.date]) state.picks[d.date] = opt;
-    state.steps[k] = was ? a.filter(z => z !== x.id) : a.concat(x.id); if (x.id === 'ig') { if (was) delete state.done[d.date]; else state.done[d.date] = true; }
-    if (!was) { OPEN.delete(x.id); const S = $('flow')._S, nx = S.slice(S.indexOf(x) + 1).find(z => z.b === x.b && !state.steps[k].includes(z.id)); if (nx) OPEN.add(nx.id); }
-    save(); render(); }
+  if (btn && btn.dataset.ok) toggleDone(d, x);
 };
-$('cols').addEventListener('scroll', () => { const C = $('cols'), i = Math.round(C.scrollLeft / C.clientWidth); [...$('dots').children].forEach((b, j) => b.classList.toggle('on', j === i)); }, { passive: true });
-$('dots').onclick = e => { const i = [...$('dots').children].indexOf(e.target); if (i >= 0) $('cols').scrollTo({ left: i * $('cols').clientWidth, behavior: 'smooth' }); };
+function goTab(i, smooth = true) { const C = $('cols'), cols = C.querySelectorAll('.col'); if (!cols[i]) return; if (getComputedStyle(C).display === 'flex') C.scrollTo({ left: cols[i].offsetLeft - C.offsetLeft, behavior: smooth ? 'smooth' : 'auto' }); syncTabs(i); }
+function syncTabs(i) { [...$('tabs').children].forEach((b, j) => b.classList.toggle('on', j === i)); }
+$('cols').addEventListener('scroll', () => { const C = $('cols'); syncTabs(Math.round(C.scrollLeft / C.clientWidth)); }, { passive: true });
+$('tabs').onclick = e => { const b = e.target.closest('button'); if (b) goTab(+b.dataset.i); };
+// ── teclado (compu) ──
+document.addEventListener('keydown', async e => {
+  if (view !== 'dia' || $('lb').classList.contains('on') || /INPUT|TEXTAREA/.test(document.activeElement.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+  const S = $('flow')._S || [], d = PLAN[cur]; if (!S.length) return; let i = S.findIndex(z => z.id === SEL);
+  const k = e.key.toLowerCase();
+  if (k === 'j' || k === 'arrowdown' && e.shiftKey) { SEL = S[Math.min(S.length - 1, i + 1)].id; }
+  else if (k === 'k' || k === 'arrowup' && e.shiftKey) { SEL = S[Math.max(0, i - 1)].id; }
+  else if (k === 'enter' || k === 'o') { if (!SEL) return; OPEN.has(SEL) ? OPEN.delete(SEL) : OPEN.add(SEL); }
+  else if (k === 'x' || k === ' ') { if (!SEL) return; e.preventDefault(); toggleDone(d, S[i]); return; }
+  else if (k === 'c' || k === 'd') { const x = S[i]; if (!x) return; const a = x.acts.find(z => k === 'c' ? z[1] === 'copy' : z[1] !== 'copy'); if (!a) return; if (a[1] === 'copy') copy(a[2]); else if (a[1] === 'dlall') { for (const f of a[2]) { if (!(await get(f, true))) break; } } else get(a[2]); return; }
+  else if (/^[1-4]$/.test(k)) { const b = +k - 2; const x = b < 0 ? null : S.find(z => z.b === b); if (x) SEL = x.id; }
+  else return;
+  e.preventDefault(); render(); const el = $('flow').querySelector('.st.sel'); if (el) el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+});
 let FX = { S: [], i: 0 };
 function fxOpen(b) {
   const d = PLAN[cur]; if (!state.picks[d.date]) { state.picks[d.date] = opt; save(); }
@@ -652,6 +705,7 @@ try { const t = localStorage.getItem(LS + '-t'); if (t) document.documentElement
 const h = location.hash.slice(1), hi = PLAN.findIndex(d => d.date === h);
 cur = hi >= 0 ? hi : todayIdx(); opt = state.picks[PLAN[cur].date] || 'A';
 render();
+if (!window.claude && 'serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js').catch(() => {});
 </script>
 </body>
 </html>
