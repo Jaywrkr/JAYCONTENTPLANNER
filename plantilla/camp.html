@@ -39,7 +39,7 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
 .st .media{margin:14px 0 0 32px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}.st .media::-webkit-scrollbar{height:2px}.st .media::-webkit-scrollbar-thumb{background:var(--fg)}
 .st .media img{height:240px;width:auto;display:block;background:var(--soft);cursor:zoom-in}
 .st .ac{margin:14px 0 0 32px}
-.st.ok .hd{cursor:pointer}.st.ok h3{color:var(--dim)}.st.ok .bd{display:none}.st .ck{font-size:13px}
+.st{padding:16px 0}.st .hd{cursor:pointer}.st .bd{display:none;padding-bottom:6px}.st.open .bd{display:block}.st.ok h3{color:var(--dim)}.st .ck{font-size:14px;width:18px;text-align:right}.st.ok .ck{color:var(--fg)}.st:not(.ok) .ck{color:var(--dim)}.st.open h3{color:var(--fg)}
 .daydone{text-align:center;padding:40px 0;color:var(--dim)}.daydone h3{color:var(--fg);font-weight:300;font-size:22px;margin-bottom:6px}
 .c0 .prev img{max-height:380px;width:auto;margin:0 auto}
 @media(max-width:900px){.cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.cols::-webkit-scrollbar{display:none}
@@ -104,6 +104,7 @@ header .brand{white-space:nowrap}header nav{gap:12px!important}header nav button
       <button id="nMes">Mes</button>
       <a id="nDat" href="https://claude.ai/artifact/KRxuMC3z95P1RgsdbA3RxA" target="_blank" rel="noopener" style="font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:inherit;text-decoration:none">Datos</a>
       <button id="nInv">Invertir</button>
+      <span class="lab" id="sync" style="margin-left:6px;opacity:.6"></span>
     </nav>
   </header>
   <div class="rule"></div>
@@ -247,6 +248,7 @@ const CHANGES = [
 const mk = s => `<span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true">${MK[s]}</svg></span>`;
 const $ = id => document.getElementById(id);
 const A = f => 'c/' + f;
+const OPEN = new Set();
 let state = { picks:{}, done:{}, steps:{} }, cur = 0, opt = 'A', view = 'dia', db = null, dl = null;
 
 // ── estado ──
@@ -254,11 +256,25 @@ const LS = 'jay-campana-1';
 const DOC = 'estado/campana';
 try { const s = JSON.parse(localStorage.getItem(LS) || 'null'); if (s) state = Object.assign(state, s); } catch (e) {}
 let wT = null;
+// fuera de Claude: guarda en el servidor (Vercel) con tu clave
+let KEY = null, API = false, lastSync = '';
+try { const u = new URLSearchParams(location.search).get('k'); if (u) { localStorage.setItem('jay-key', u); history.replaceState(null, '', location.pathname + location.hash); } KEY = localStorage.getItem('jay-key'); } catch (e) {}
+function syncMark(t) { const e = document.getElementById('sync'); if (e) e.textContent = t; }
+async function pull() {
+  if (window.claude || !KEY) return;
+  try { const r = await fetch('/api/state', { headers: { 'x-key': KEY }, cache: 'no-store' }); if (!r.ok) { syncMark(r.status === 401 ? 'clave incorrecta' : 'sin sincronizar'); return; }
+    const d = await r.json(); API = true; syncMark('sincronizado');
+    if (!d.steps && Object.keys(state.steps).length) { save(); return; }
+    const js = JSON.stringify(d); if (d && d.steps && js !== lastSync) { lastSync = js; state = { picks: d.picks || {}, done: d.done || {}, steps: d.steps || {} }; try { localStorage.setItem(LS, js); } catch (e) {} render(); }
+  } catch (e) { syncMark('sin conexión'); }
+}
 function save() {
   try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {}
-  if (!db) return;
-  clearTimeout(wT); wT = setTimeout(() => db.doc(DOC).set(state).catch(() => {}), 400);
+  clearTimeout(wT);
+  if (db) { wT = setTimeout(() => db.doc(DOC).set(state).catch(() => {}), 400); return; }
+  if (API && KEY) { syncMark('guardando…'); wT = setTimeout(async () => { try { const body = JSON.stringify(state); const r = await fetch('/api/state', { method: 'PUT', headers: { 'x-key': KEY, 'content-type': 'application/json' }, body }); if (r.ok) { lastSync = body; syncMark('sincronizado'); } else syncMark('no se guardó'); } catch (e) { syncMark('sin conexión'); } }, 400); }
 }
+if (!window.claude) { pull(); setInterval(pull, 20000); addEventListener('focus', pull); document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); }); }
 (async () => {
   try {
     if (!window.claude) return;
@@ -447,7 +463,7 @@ function flow(d, o) {
   if (OT.li) add(0, 'li', 'LinkedIn', 'Publica la imagen con este texto.', [OT.li.img], [['Imagen', 'dl', OT.li.img], ['Copiar texto', 'copy', OT.li.text]]);
   if (OT.tx) add(0, 'tx', 'Threads y X', OT.tx, [], [['Copiar texto', 'copy', OT.tx]]);
   const YL = d.ytl;
-  if (YL && YL.kind === 'pub') add(0, 'ytl', 'YouTube · episodio ' + YL.ep + ' · 11:30', YL.title + '\n' + YL.sub, [YL.thumb], [['Miniatura', 'dl', YL.thumb], ['Copiar título', 'copy', YL.title], ['Copiar descripción', 'copy', YL.desc], ['Copiar comentario fijado', 'copy', YL.pin]]);
+  if (YL && YL.kind === 'pub') (YL.steps || []).forEach(z => add(z.b, z.id, z.t, z.sub, z.media || [], z.acts || []));
   const post = o.video ? [o.video] : o.files;
   add(0, 'ig', 'Publica en Instagram · 11:30', o.fmt, o.video ? [o.poster] : o.files.slice(0, 5),
     [...(o.video ? [['Reel', 'dl', o.video]] : o.files.length > 1 ? [['Las ' + o.files.length + ' slides', 'dlall', o.files]] : [['Imagen', 'dl', o.files[0]]]), ['Copiar caption', 'copy', o.cap]]);
@@ -466,18 +482,20 @@ function flow(d, o) {
   return S;
 }
 const fkey = d => d.date + ':flow';
+let OPENDAY = null;
 function blocksRender(d, o) {
+  if (OPENDAY !== d.date) { OPEN.clear(); OPENDAY = d.date; }
   const S = flow(d, o), done = state.steps[fkey(d)] || [], C = $('cols'), keep = [...C.querySelectorAll('.col')].map(c => c.scrollTop);
   let h = '';
   BL.forEach(([n, hr], b) => { const st = S.filter(x => x.b === b), ok = st.filter(x => done.includes(x.id)).length;
     h += `<section class="col cb"><div class="ch"><div class="r"><b><i>0${b + 2}</i>${n}</b><span class="lab">${st.length ? (ok === st.length ? '✓' : ok + ' / ' + st.length) : ''}</span></div><div class="lab" style="margin-top:4px">${hr}</div><div class="bar"><i style="width:${st.length ? ok / st.length * 100 : 0}%"></i></div></div>`;
     if (!st.length) h += `<div class="daydone">Nada en este bloque.<br>simple.</div>`;
     st.forEach((x, j) => { const k = done.includes(x.id);
-      h += `<div class="st ${k ? 'ok' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${esc(x.t)}</h3><span class="ck">${k ? '✓' : ''}</span></div><div class="bd">
+      h += `<div class="st ${k ? 'ok' : ''} ${OPEN.has(x.id) ? 'open' : ''}" data-id="${x.id}"><div class="hd"><span class="n">${String(j + 1).padStart(2, '0')}</span><h3>${esc(x.t)}</h3><span class="ck">${k ? '✓' : '○'}</span></div><div class="bd">
         ${x.sub ? `<div class="sb">${esc(x.sub).replace(/~~(.+?)~~/g, '<s>$1</s>').replace(/(https:\/\/claude\.ai\/artifact\/[A-Za-z0-9]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:inherit">abrir ↗</a>')}</div>` : ''}
         ${x.media.length ? `<div class="media">${x.media.map(f => `<img src="${A(f)}" alt="" loading="lazy">`).join('')}</div>` : ''}
         <div class="ac">${x.acts.map(([l, kk], i) => `<button class="btn mt8" data-a="${i}"><span>${l}</span><span>${kk === 'copy' ? '⧉' : '↓'}</span></button>`).join('')}
-        <button class="btn solid mt8" data-ok="1"><span>Hecho</span><span>✓</span></button></div></div></div>`; });
+        <button class="btn ${k ? '' : 'solid'} mt8" data-ok="1"><span>${k ? 'Hecho · deshacer' : 'Hecho'}</span><span>${k ? '↺' : '✓'}</span></button></div></div></div>`; });
     if (b === 2 && S.length && S.every(x => done.includes(x.id))) h += `<div class="daydone"><h3>Día completo.</h3>simple.</div>`;
     h += '</section>'; });
   $('flow').innerHTML = h; $('flow')._S = S;
@@ -488,8 +506,10 @@ $('flow').onclick = async e => {
   const d = PLAN[cur], x = $('flow')._S.find(z => z.id === st.dataset.id), k = fkey(d), a = state.steps[k] || [];
   if (btn && btn.dataset.a != null) { const [, kind, v] = x.acts[+btn.dataset.a]; if (kind === 'copy') copy(v); else if (kind === 'dlall') { for (const f of v) { if (!(await get(f, true))) break; } } else get(v); return; }
   const was = a.includes(x.id);
-  if ((btn && btn.dataset.ok) || (was && e.target.closest('.hd'))) { if (!state.picks[d.date]) state.picks[d.date] = opt;
+  if (!btn && e.target.closest('.hd')) { OPEN.has(x.id) ? OPEN.delete(x.id) : OPEN.add(x.id); render(); return; }
+  if (btn && btn.dataset.ok) { if (!state.picks[d.date]) state.picks[d.date] = opt;
     state.steps[k] = was ? a.filter(z => z !== x.id) : a.concat(x.id); if (x.id === 'ig') { if (was) delete state.done[d.date]; else state.done[d.date] = true; }
+    if (!was) { OPEN.delete(x.id); const S = $('flow')._S, nx = S.slice(S.indexOf(x) + 1).find(z => z.b === x.b && !state.steps[k].includes(z.id)); if (nx) OPEN.add(nx.id); }
     save(); render(); }
 };
 $('cols').addEventListener('scroll', () => { const C = $('cols'), i = Math.round(C.scrollLeft / C.clientWidth); [...$('dots').children].forEach((b, j) => b.classList.toggle('on', j === i)); }, { passive: true });
