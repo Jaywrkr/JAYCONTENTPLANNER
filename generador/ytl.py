@@ -16,50 +16,62 @@ Por qué posponer nos pasa a todos, y cómo romperlo hoy con 5 minutos.
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
 EP2="""[00:00]
-Te piden algo y dices que sí.
-Una vez más.
-Y al final del día, lo tuyo sigue igual.
-No te falta tiempo.
-Te sobra sí.
+Hoy dijiste que sí varias veces.
+Y una de esas te quita la semana.
+No lo notas, porque no duele en el momento.
+Al final te doy la frase exacta que uso cuando no quiero algo.
+Y nadie se molesta.
 
-[00:25]
-Cada sí tiene un costo.
-No lo ves, pero lo pagas.
-Si dices sí a una llamada de una hora,
-le dices no a una hora de lo tuyo.
-Cinco sí al día son cinco horas.
-Más de media semana de tu tiempo.
+[00:20]
+Lunes. Nueve de la mañana.
+Te escriben: ¿tienes cinco minutos?
+Dices que sí.
+Los cinco minutos son una hora.
+Después llega un mensaje más.
+Y uno más.
+Al final del día hiciste mucho.
+Pero nada tuyo.
 
-[01:20]
-¿Y por qué dices que sí?
-Casi nunca es porque quieres.
-Es porque el no se siente mal.
-Te da miedo que piensen mal de ti.
-Pero el sí fácil sale caro.
+[01:00]
+Haz la cuenta.
+Un sí de una hora es una hora menos de lo tuyo.
+Cinco al día son cinco horas.
+En una semana, veinticinco.
+Es más de media semana de tu tiempo.
+Pero eso no es lo peor.
 
-[02:10]
-Un no puede ser amable.
-Basta con esto:
-Ahora no puedo. ¿Te parece el jueves?
-O esto:
-Esta semana no. Lo veo el lunes.
+[01:40]
+Lo peor es que casi nunca querías.
+Dijiste sí porque el no se siente mal.
+Porque no quieres que piensen mal de ti.
+Así que pagas con tu tiempo
+para que alguien no se moleste dos segundos.
+Haz esa cuenta también.
+
+[02:30]
+Ahora, la frase.
+Cuando te piden algo, no contestes en el momento.
+Di esto:
+Déjame ver y te aviso.
+Esa pausa te devuelve la decisión.
+Y si es no, di esto:
+Esta semana no puedo. ¿Lo vemos el lunes?
 Es un no, pero con fecha.
+Nadie se molesta con una fecha.
 Y muchas cosas, el lunes, ya no hacen falta.
 
-[03:00]
-Entonces, esto.
-La próxima vez que te pidan algo,
-no contestes en el momento.
-Di: déjame ver y te aviso.
-Esos segundos te devuelven la decisión.
-Y si es un sí, que sea un sí que elegiste.
+[03:30]
+Haz esto hoy.
+Antes de dar un sí, espera un minuto.
+Solo un minuto.
+Vas a ver cuántos sí no eran tuyos.
 
-[03:40]
+[03:50]
 Una pregunta.
 ¿A qué le dijiste sí esta semana sin quererlo?
-Escribe solo una cosa.
+Escribe solo una palabra.
 
-[03:55]
+[04:05]
 Cada sí cuesta algo.
 Elige qué pagas.
 Simple.
@@ -84,17 +96,16 @@ EP1={'endAt':'4:08','kind':'pub','ep':'01','title':'Mañana + mañana + mañana 
   'pin':'¿Hay algo que llevas más de un mes posponiendo para mañana? Solo responde: sí.',
   'sub':'Sube el video que te mandé en el chat (ep01-youtube.mp4). Público · no es para niños · idioma español · categoría Educación. Pantalla final: un video + suscribirse sobre los dos recuadros. Luego fija el comentario y sube una historia con el link.'}
 D['2026-10-20']['ytl']=pub_steps(EP1)
-EP2_DESC="""Dices que sí y al final del día lo tuyo sigue igual.
-Cuánto te cuesta cada sí, por qué lo das, y cómo decir no sin quedar mal.
+EP2_DESC="""Cada sí que das le quita horas a lo tuyo.\nCuánto te cuesta, por qué lo das, y la frase exacta para decir no sin que nadie se moleste.
 
 (capítulos: te llegan en el chat con el video)
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
-D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'Cada sí te cuesta algo','script':EP2,
+D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'La frase que uso para decir no (sin quedar mal)','script':EP2,
   'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
-D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'Cada sí te cuesta algo','desc':EP2_DESC,
-  'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una cosa.'})
+D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
+  'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una palabra.'})
 D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03 · Atención','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Pilar: atención — tema propuesto: Tu celular no es el problema.)',
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
