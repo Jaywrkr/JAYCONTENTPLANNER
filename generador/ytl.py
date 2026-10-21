@@ -16,56 +16,52 @@ Por qué posponer nos pasa a todos, y cómo romperlo hoy con 5 minutos.
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
 EP2="""[00:00]
-Fallaste un día.
-Y decides que ya no vale la pena.
-Que ya lo dañaste.
-Que mejor empiezas el lunes.
-Ahí está el problema.
-Un mal día no es un mal mes.
+Te piden algo y dices que sí.
+Una vez más.
+Y al final del día, lo tuyo sigue igual.
+No te falta tiempo.
+Te sobra sí.
 
 [00:25]
-Haz la cuenta.
-Piensa en un mes completo.
-Un día malo es una casilla.
-Las demás siguen ahí.
-El problema no es el día malo.
-Es lo que haces al día siguiente.
+Cada sí tiene un costo.
+No lo ves, pero lo pagas.
+Si dices sí a una llamada de una hora,
+le dices no a una hora de lo tuyo.
+Cinco sí al día son cinco horas.
+Más de media semana de tu tiempo.
 
 [01:20]
-Lo que pasa casi siempre es esto.
-Fallas un día y piensas: ya da igual.
-Y fallas el segundo.
-Y el siguiente.
-Un día malo no te cuesta el mes.
-Lo que te cuesta el mes es dejarlo ahí.
+¿Y por qué dices que sí?
+Casi nunca es porque quieres.
+Es porque el no se siente mal.
+Te da miedo que piensen mal de ti.
+Pero el sí fácil sale caro.
 
-[02:20]
-Hay una sola regla.
-Nunca dos días seguidos.
-Puedes fallar uno.
-Nunca dos.
-Si un día no lo hiciste, al siguiente sí.
-Aunque sea cinco minutos.
-Aunque sea mal.
-Hecho a medias le gana a no hecho.
+[02:10]
+Un no puede ser amable.
+Basta con esto:
+Ahora no puedo. ¿Te parece el jueves?
+O esto:
+Esta semana no. Lo veo el lunes.
+Es un no, pero con fecha.
+Y muchas cosas, el lunes, ya no hacen falta.
 
-[03:10]
+[03:00]
 Entonces, esto.
-Si hoy fallaste en algo, no lo sueltes.
-Mañana haz lo mínimo.
-Lo mínimo cuenta.
-El mes no se pierde en un día.
-Se pierde en el segundo.
+La próxima vez que te pidan algo,
+no contestes en el momento.
+Di: déjame ver y te aviso.
+Esos segundos te devuelven la decisión.
+Y si es un sí, que sea un sí que elegiste.
 
 [03:40]
 Una pregunta.
-¿Cuántas veces has dejado algo después de un solo día malo?
-Escribe el número.
-Solo el número.
+¿A qué le dijiste sí esta semana sin quererlo?
+Escribe solo una cosa.
 
 [03:55]
-Un mal día es un día.
-Dos son el inicio de dejarlo.
+Cada sí cuesta algo.
+Elige qué pagas.
 Simple.
 Nos vemos la próxima semana."""
 
@@ -88,18 +84,18 @@ EP1={'endAt':'4:08','kind':'pub','ep':'01','title':'Mañana + mañana + mañana 
   'pin':'¿Hay algo que llevas más de un mes posponiendo para mañana? Solo responde: sí.',
   'sub':'Sube el video que te mandé en el chat (ep01-youtube.mp4). Público · no es para niños · idioma español · categoría Educación. Pantalla final: un video + suscribirse sobre los dos recuadros. Luego fija el comentario y sube una historia con el link.'}
 D['2026-10-20']['ytl']=pub_steps(EP1)
-EP2_DESC="""Fallaste un día y ya sientes que perdiste el mes.
-Por qué un mal día no es un mal mes, y la única regla que necesitas.
+EP2_DESC="""Dices que sí y al final del día lo tuyo sigue igual.
+Cuánto te cuesta cada sí, por qué lo das, y cómo decir no sin quedar mal.
 
 (capítulos: te llegan en el chat con el video)
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
-D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'Un mal día no es un mal mes','script':EP2,
+D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'Cada sí te cuesta algo','script':EP2,
   'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
-D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'Un mal día no es un mal mes','desc':EP2_DESC,
-  'pin':'¿Cuántas veces dejaste algo después de un solo día malo? Escribe el número.'})
-D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Será sobre el post que mejor funcionó esta semana.)',
+D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'Cada sí te cuesta algo','desc':EP2_DESC,
+  'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una cosa.'})
+D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03 · Atención','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Pilar: atención — tema propuesto: Tu celular no es el problema.)',
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')
