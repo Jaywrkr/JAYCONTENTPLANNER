@@ -18,7 +18,7 @@ TX={
 }
 LI={
 '2026-10-20':('li-1020.jpg','Una reunión de una hora con 8 personas no dura una hora.\nDura un día de trabajo.\n\nAntes de convocar, me hago tres preguntas:\n1. ¿Se puede resolver por escrito?\n2. ¿Quién tiene que estar de verdad?\n3. ¿Qué decisión sale de aquí?\n\nSi no hay decisión, no hay reunión.\n\n¿Cuántas horas de reunión tuvo tu equipo esta semana?'),
-'2026-10-22':('li-1022.jpg','Liderando equipos técnicos aprendí esto tarde:\n\nCuando das órdenes, el equipo hace la tarea.\nCuando das contexto, el equipo resuelve el problema.\n\nContexto es: para qué sirve, para quién es y qué pasa si sale mal.\nCon eso, un buen ingeniero decide mejor que yo.\n\nMenos instrucciones. Más porqués.'),
+'2026-10-22':('li-1022b.jpg','Una pregunta que intento hacer más seguido:\n¿Tú qué harías?\n\nAntes de dar mi opinión.\nQuien está más cerca del problema casi siempre lo ve mejor.\n\nNo siempre me acuerdo de hacerla.\nCuando la hago, la respuesta suele ser mejor que la mía.'),
 '2026-10-27':('li-1027.jpg','Un proyecto no se atrasa en la última semana.\nSe atrasa el primer día que alguien no dijo “no sé”.\n\nEn proyectos de infraestructura, el problema casi nunca es técnico. Es lo que nadie se atrevió a preguntar a tiempo.\n\nPor eso en mi equipo “no sé” no es un error. Es el inicio del trabajo.'),
 '2026-10-29':('li-1029.jpg','Si para delegar tienes que explicar cada paso, no delegaste. Supervisaste.\n\nDelegar es entregar el resultado que necesitas y la fecha.\nEl cómo lo decide quien lo hace.\n\nCuesta al principio. Después, el equipo crece. Y tú también.'),
 }
