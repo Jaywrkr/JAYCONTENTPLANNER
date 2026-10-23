@@ -363,6 +363,8 @@ function render() {
     s.addEventListener('scroll', () => { c.textContent = String(Math.round(s.scrollLeft / s.clientWidth) + 1).padStart(2, '0') + ' / ' + tot; }, { passive: true });
     pv.append(s, c);
   } else { const im = new Image(); im.src = A(o.files[0]); im.alt = o.title; pv.appendChild(im); }
+  { let wv = $('wall0'); if (!wv) { wv = document.createElement('div'); wv.id = 'wall0'; pv.after(wv); } wv.innerHTML = '';
+    if (o.wall) { wv.innerHTML = `<div class="lab mt16">Los 2 fondos · historias</div><div class="hlstrip">${[o.wall.lock, o.wall.home].map(f => `<img src="${A(f)}" alt="">`).join('')}</div>`; } }
 
   const isPicked = picked === opt, isDone = !!state.done[d.date];
   $('status').innerHTML = `<span class="${picked ? 'on' : ''}">${picked ? 'Elegida: ' + picked : 'Sin elegir'}</span><span class="${isDone ? 'on' : ''}">${isDone ? '✓ Publicado' : 'No publicado'}</span>`;
@@ -506,7 +508,7 @@ function flow(d, o) {
   add(2, 'cm', 'Responde comentarios', 'Una línea a cada uno. Incluye a quien compartió por DM.', [], []);
   // chip de plataforma + títulos cortos
   const CH = { li: 'LI', tx: 'TH X', ig: 'IG', h1: 'IG', h2: 'IG', h3: 'IG', w1: 'IG', w2: 'IG', ex: 'IG', cm: 'IG', yt: 'YT TT', rec: 'YT', y1: 'YT', y2: 'YT', y3: 'YT', y4: 'YT', y5: 'YT', y6: 'YT', y7: 'YT', y8: 'YT IG' };
-  const TT = { li: 'Post', tx: 'Frase', ig: 'Post', h1: 'Historia 1', h3: 'Historia 3 · proceso', cm: 'Responde comentarios', y1: 'Sube el video', y2: 'Título y descripción', y3: 'Miniaturas A/B/C', y4: 'Playlist y detalles', y5: 'Subtítulos', y6: 'Pantalla final', y7: 'Programa', y8: 'Comentario + historia' };
+  const TT = { li: 'Post', tx: 'Frase', ig: 'Post', h1: 'Historia 1', w1: 'Historia 2 · fondo bloqueo', w2: 'Historia 3 · fondo inicio', h3: 'Historia 3 · proceso', cm: 'Responde comentarios', y1: 'Sube el video', y2: 'Título y descripción', y3: 'Miniaturas A/B/C', y4: 'Playlist y detalles', y5: 'Subtítulos', y6: 'Pantalla final', y7: 'Programa', y8: 'Comentario + historia' };
   const HR = { ig: '11:30', y7: '11:30' };
   S.forEach(x => { x.ch = CH[x.id] || ''; x.t = TT[x.id] || x.t.replace(/^(YouTube|Instagram) · /, '').replace(/ · \d\d:\d\d$/, ''); x.hr = HR[x.id] || ''; });
   return S;
@@ -619,7 +621,7 @@ function lbOpen(list, i) { LB = { list, i }; lbShow(); $('lb').classList.add('on
 function lbClose() { $('lb').classList.remove('on'); document.body.style.overflow = ''; }
 const lbStep = d => { const n = LB.list.length; LB.i = (LB.i + d + n) % n; lbShow(); };
 document.addEventListener('click', e => {
-  const im = e.target.closest('.prev img, .hlstrip img, .st .media img'); if (!im) return;
+  const im = e.target.closest('.prev img, .hlstrip img, .st .media img, #wall0 img'); if (!im) return;
   const group = [...im.parentElement.querySelectorAll('img')];
   lbOpen(group.map(x => x.src), group.indexOf(im));
 });
