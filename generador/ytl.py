@@ -102,11 +102,69 @@ EP2_DESC="""Cada sí que das le quita horas a lo tuyo.\nCuánto te cuesta, por q
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
+EP3="""[00:00]
+Hoy desbloqueaste tu teléfono muchas veces.
+Más de las que crees.
+Y casi ninguna fue una decisión.
+Te voy a dar una cosa que hago para que eso no pase.
+Y no es dejar el teléfono.
+
+[00:20]
+Haz esta prueba.
+Piensa en la última vez que lo tomaste.
+¿Qué ibas a hacer?
+Muchas veces no sabes.
+Lo tomaste porque estaba ahí.
+La mano llega antes que la idea.
+
+[01:00]
+Y no es tu culpa del todo.
+Cada app está hecha para que vuelvas.
+Un punto de color.
+Un número en la esquina.
+Un sonido.
+Del lado de la app hay gente pagada para que no lo sueltes.
+Pero eso no es lo peor.
+
+[01:45]
+Lo peor es lo que pasa después.
+Cada vez que lo miras, tu cabeza deja lo que hacías.
+Y volver a lo que hacías cuesta minutos.
+Haz la cuenta:
+Si lo tomas cincuenta veces y se van dos minutos cada vez,
+son cien minutos al día.
+Casi dos horas que no son tuyas.
+
+[02:40]
+El teléfono no es el problema.
+El problema es que está a la mano.
+Así que esto es lo que hago:
+Cuando hago algo que vale, el teléfono va lejos.
+Fuera de la vista. En un cajón, en la mochila, en la cocina.
+No lo apago. No lo bloqueo.
+Solo lo alejo.
+Si tienes que ir a buscarlo, ya no es automático.
+
+[03:30]
+Haz esto hoy.
+Una hora. El teléfono lejos.
+Solo una hora.
+Vas a ver cuántas veces tu mano lo busca.
+
+[03:50]
+Una pregunta.
+¿Cuántas veces crees que lo tomaste hoy?
+Escribe solo el número.
+
+[04:00]
+Lejos de la vista. Lejos de la mano.
+Simple.
+Nos vemos la próxima semana."""
 D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'La frase que uso para decir no (sin quedar mal)','script':EP2,
   'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
 D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
   'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una palabra.'})
-D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03 · Atención','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Pilar: atención — tema propuesto: Tu celular no es el problema.)',
+D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Por qué no puedes soltar el teléfono','script':EP3,
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')
