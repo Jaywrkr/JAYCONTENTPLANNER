@@ -118,9 +118,9 @@ by('2026-10-24').A = { sl: [['3 cosas', 'que ya no hago.'], ['Contestar todo', '
   cap: 'Dejar de hacer también es avanzar.\nMándaselo a quien hace de todo y no termina nada.', st: ['Historia 1: comparte el post.', 'Historia 2: encuesta “¿Cuál te cuesta más dejar?” La 1 / La 2 / La 3.'], pr: ['proceso'] };
 by('2026-10-24').B = { sl: [['3 preguntas', 'que me hago cada lunes.'], ['¿Qué es lo único', 'importante esta semana?'], ['¿Qué puedo', 'dejar de hacer?'], ['¿A quién tengo', 'que llamar?'], ['simple.']], th: 'W',
   cap: 'Tres preguntas, cinco minutos, toda la semana más clara.\nGuárdalo para el lunes.', st: ['Historia 1: comparte el post.', 'Historia 2: pregunta “¿Qué te preguntas tú cada lunes?”'], pr: ['proceso'] };
-by('2026-10-25').A = { sf: 'ocupado', th: 'N', t: 'Estar ocupado es la excusa más elegante', cap: 'Suena importante. Casi nunca lo es.\nMándaselo a quien siempre está “ocupado”.',
-  st: ['Historia 1: comparte el post.', 'Historia 2: encuesta “¿Cuántas veces dijiste ‘estoy ocupado’ esta semana?” Pocas / Muchas.'], pr: ['proceso'] };
-by('2026-10-25').B = { sf: 'nadie', th: 'W', t: 'Lo que haces cuando nadie mira, eso eres', cap: 'Sin público, sin aplausos.\nMándaselo a quien trabaja aunque nadie lo vea.',
-  st: ['Historia 1: comparte el post.', 'Historia 2: pregunta “¿Qué haces cuando nadie te ve?”'], pr: ['proceso'] };
+by('2026-10-25').A = { sf: 'lunes', th: 'N', t: '“Empiezo el lunes.” Lo dijiste hace 11 lunes', cap: 'El lunes no tiene nada especial. Hoy tampoco. Por eso sirve.\nMándaselo a quien empieza todos los lunes.',
+  st: ['Historia 1: comparte el post.', 'Historia 2: encuesta “¿Cuántos lunes llevas con eso?” Pocos / Muchos.'], pr: ['proceso'] };
+by('2026-10-25').B = { sf: 'calendario', th: 'W', t: 'Si no está en tu calendario, no te importa', cap: 'Lo que importa tiene hora. Lo demás es intención.\nMándaselo a quien dice que lo va a hacer “un día de estos”.',
+  st: ['Historia 1: comparte el post.', 'Historia 2: pregunta “¿Qué vas a poner hoy en tu calendario?”'], pr: ['proceso'] };
 delete by('2026-10-24').extra;
 module.exports = D;
