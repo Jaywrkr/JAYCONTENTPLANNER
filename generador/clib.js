@@ -279,14 +279,14 @@ EQ2.haces = (o, W, H) => {
   const M = module.exports;
   M.SFG.ocupado = (o, W, H) => { const w = 300, h = 70, x = W / 2 - w / 2, y = H / 2 - 160; M.R(o, x, y, w, h, 1); M.txt(o, 'OCUPADO', W / 2, y + h / 2, 20, 0, 'center', 400); M.lines(o, W, H / 2 + 60, ['Estar ocupado es', 'la excusa más elegante.']); };
 
-  M.SFG.lunes = (o, W, H) => { const s = 120, g = 26, cols = 4, x0 = W / 2 - (cols * s + (cols - 1) * g) / 2, y0 = H / 2 - 375;
+  M.SFG.lunes = (o, W, H) => { const s = 120, g = 26, cols = 4, gh = 3 * s + 2 * g, gap = 100, th = 60, x0 = W / 2 - (cols * s + (cols - 1) * g) / 2, y0 = H / 2 - (gh + gap + th) / 2;
     for (let i = 0; i < 12; i++) { const x = x0 + (i % cols) * (s + g), y = y0 + Math.floor(i / cols) * (s + g);
       M.B(o, x, y, s, s, i === 11 ? 1 : .35); M.txt(o, 'LUN', x + s / 2, y + s / 2, 22, i === 11 ? 1 : .35, 'center', 400);
       if (i < 11) M.R(o, x + 18, y + s / 2 - .75, s - 36, 1.5, .8); }
-    M.lines(o, W, H / 2 + 185, ['“Empiezo el lunes.”', 'Lo dijiste hace 11 lunes.']); };
-  M.SFG.calendario = (o, W, H) => { const cw = 100, ch = 54, x0 = W / 2 - 7 * cw / 2, y0 = H / 2 - 395;
+    M.lines(o, W, y0 + gh + gap + th / 2, ['“Empiezo el lunes.”', 'Lo dijiste hace 11 lunes.']); };
+  M.SFG.calendario = (o, W, H) => { const cw = 100, ch = 54, gh = 8 * ch, top = 40, gap = 100, th = 60, x0 = W / 2 - 7 * cw / 2, y0 = H / 2 - (top + gh + gap + th) / 2 + top;
     'LMMJVSD'.split('').forEach((d, i) => M.lab(o, d, x0 + i * cw + cw / 2, y0 - 26, 'center', .5));
     for (let r = 0; r < 8; r++) for (let c = 0; c < 7; c++) M.B(o, x0 + c * cw, y0 + r * ch, cw, ch, .25, 1);
-    M.lines(o, W, H / 2 + 185, ['Si no está en tu calendario,', 'no te importa.']); };
+    M.lines(o, W, y0 + gh + gap + th / 2, ['Si no está en tu calendario,', 'no te importa.']); };
   M.SFG.nadie = (o, W, H) => { const s = 360, x = W / 2 - s / 2, y = H / 2 - 330; M.B(o, x, y, s, s, 0.5); M.R(o, x + s / 2 - 6, y + s / 2 - 6, 12, 12, 1); M.lines(o, W, H / 2 + 160, ['Lo que haces cuando nadie mira,', 'eso eres.']); };
 }
