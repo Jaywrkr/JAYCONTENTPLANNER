@@ -1,0 +1,36 @@
+// Shorts animados por elemento (9:16). Uso: node anim.js <id>   → /home/claude/campana/c/<id>-short.mp4
+const { Canvas, FontLibrary } = require('skia-canvas'); const fs = require('fs'); const { spawn, execSync } = require('child_process');
+const FD = '/tmp/claude-0/-home-claude/525290eb-24d3-57f0-908c-10012545278e/scratchpad/reel/fonts/'; FontLibrary.use('Geist Mono', fs.readdirSync(FD).map(f => FD + f));
+const W = 1080, H = 1920, FPS = 30, CX = W / 2, OUT = '/home/claude/campana/c';
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), pr = (t, a, b) => clamp((t - a) / (b - a)), eo = x => 1 - Math.pow(1 - x, 3), ez = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+let FG = '255,255,255'; const g = a => `rgba(${FG},${a})`;
+const T = (o, s, x, y, sz, a = 1, al = 'center', w = 300) => { o.font = `${w} ${sz}px "Geist Mono"`; o.fillStyle = g(a); o.textAlign = al; o.textBaseline = 'middle'; o.fillText(s, x, y); return o.measureText(s).width; };
+const R = (o, x, y, w, h, a = 1) => { if (w > 0 && h > 0) { o.fillStyle = g(a); o.fillRect(x, y, w, h); } };
+const B = (o, x, y, w, h, a = 1, lw = 2) => { o.strokeStyle = g(a); o.lineWidth = lw; o.strokeRect(x, y, w, h); };
+const lab = (o, s, x, y, al = 'left', a = .55) => T(o, s.toUpperCase(), x, y, 24, a, al, 400);
+const type = (o, s, x, y, sz, t0, t, al = 'center', a = 1) => { const n = Math.floor(clamp((t - t0) / .045, 0, s.length)); if (n <= 0) return; const full = (o.font = `300 ${sz}px "Geist Mono"`, o.measureText(s).width);
+  const x0 = al === 'center' ? x - full / 2 : x; T(o, s.slice(0, n), x0, y, sz, a, 'left'); if (n < s.length && Math.floor(t * 8) % 2 === 0) R(o, x0 + o.measureText(s.slice(0, n)).width + 4, y - sz / 2, 3, sz); };
+function chrome(o, serie, t) { lab(o, '@jaywrkr', 80, 230); lab(o, serie, W - 80, 230, 'right'); T(o, 'simple.', W / 2, H - 520, 26, .45, 'center', 300); }
+
+async function run(id, S) {
+  S.ticks = S.ticks || []; S.pops = S.pops || []; if (S.init) S.init();
+  const vid = `${OUT}/${id}-short-v.mp4`;
+  const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-framerate', '' + FPS, '-i', '-', '-c:v', 'libx264', '-crf', '20', '-pix_fmt', 'yuv420p', vid], { stdio: ['pipe', 'inherit', 'inherit'] });
+  const c = new Canvas(W, H), o = c.getContext("2d"); globalThis.__keep = [c];
+  const grain = new Canvas(W, H); globalThis.__keep.push(grain); { const q = grain.getContext('2d'), d = q.createImageData(W, H); for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 10; } q.putImageData(d, 0, 0); }
+  for (let f = 0; f < S.dur * FPS; f++) { const t = f / FPS; FG = S.bg === 'N' ? '255,255,255' : '10,10,10';
+    o.fillStyle = S.bg === 'N' ? '#050505' : '#f6f6f4'; o.fillRect(0, 0, W, H); const z = 1 + .03 * t / S.dur; o.setTransform(z, 0, 0, z, CX * (1 - z), H / 2 * (1 - z)); S.draw(o, t); o.setTransform(1, 0, 0, 1, 0, 0); chrome(o, S.serie, t); o.drawImage(grain, (f % 3) * 7, 0);
+    const buf = Buffer.from(o.getImageData(0, 0, W, H).data.buffer); if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r)); }
+  ff.stdin.end(); await new Promise(r => ff.on('close', r));
+  // sonido: clic por elemento + golpe suave en el giro
+  const tk = S.ticks.map(t => t), pp = S.pops.map(t => t), parts = [], fc = [];
+  if (tk.length) { fc.push(`sine=f=1800:d=0.035,volume=0.12,afade=t=out:st=0.005:d=0.03,asplit=${tk.length + 1}${tk.map((_, i) => `[t${i}]`).join('')}[tx]`, '[tx]anullsink'); tk.forEach((t, i) => { fc.push(`[t${i}]adelay=${Math.round(t * 1000)}:all=1[T${i}]`); parts.push(`[T${i}]`); }); }
+  if (pp.length) { fc.push(`sine=f=220:d=0.25,volume=0.35,afade=t=out:st=0.02:d=0.23,asplit=${pp.length + 1}${pp.map((_, i) => `[p${i}]`).join('')}[px]`, '[px]anullsink'); pp.forEach((t, i) => { fc.push(`[p${i}]adelay=${Math.round(t * 1000)}:all=1[P${i}]`); parts.push(`[P${i}]`); }); }
+  fc.push(`anullsrc=r=48000:cl=stereo,atrim=0:${S.dur}[base]`); fc.push(`[base]${parts.join('')}amix=inputs=${parts.length + 1}:normalize=0:duration=first[a]`);
+  fs.writeFileSync(`/tmp/claude-0/-home-claude/525290eb-24d3-57f0-908c-10012545278e/scratchpad/${id}-fc.txt`, fc.join(';\n'));
+  execSync(`ffmpeg -y -loglevel error -i ${vid} -filter_complex_script /tmp/claude-0/-home-claude/525290eb-24d3-57f0-908c-10012545278e/scratchpad/${id}-fc.txt -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 160k -shortest -movflags +faststart ${OUT}/${id}-short.mp4`);
+  execSync(`ffmpeg -y -loglevel error -ss ${S.dur - 1} -i ${OUT}/${id}-short.mp4 -frames:v 1 -vf scale=540:-2 -q:v 4 ${OUT}/${id}-short-poster.jpg`); fs.unlinkSync(vid);
+  console.log(id, 'ok');
+}
+
+module.exports = { run, T, R, B, lab, type, clamp, pr, eo, ez, W, H, CX, setFG: v => { FG = v; }, getFG: () => FG };

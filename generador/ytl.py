@@ -166,5 +166,75 @@ D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'La
   'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una palabra.'})
 D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Por qué no puedes soltar el teléfono','script':EP3,
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
+
+EP3_DESC="""Tomas el teléfono sin decidirlo. Varias veces por hora.
+Por qué pasa, cuánto te cuesta, y lo único que hago para cortarlo (no es dejar el teléfono).
+
+(capítulos: te llegan en el chat con el video)
+
+Una verdad incómoda cada semana, explicada simple.
+Instagram: @jaywrkr"""
+EP4="""[00:00]
+Hay días en los que no paras.
+Llamadas, mensajes, pendientes.
+Llegas a la noche cansado.
+Y si alguien te pregunta qué avanzaste,
+te quedas en blanco.
+Hoy te doy la pregunta que uso para que eso no pase.
+
+[00:25]
+Estar ocupado se siente bien.
+Te sientes útil.
+Pero hay una diferencia simple.
+Ocupado es llenar el día.
+Avanzar es que algo cambie.
+Puedes llenar el día y que nada cambie.
+
+[01:05]
+¿Por qué pasa?
+Porque lo que llega en el momento se ve más.
+Un mensaje se ve. Una llamada se ve.
+Lo que más vale casi nunca te escribe.
+No suena. No avisa.
+Así que lo dejas para después.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es que el cansancio es el mismo.
+Un día ocupado y un día que avanza cansan igual.
+La diferencia es lo que queda.
+Uno deja más pendientes.
+El segundo deja algo hecho.
+
+[02:35]
+Ahora, la pregunta.
+Cada mañana, antes de ver los mensajes,
+me pregunto esto:
+Si hoy solo hago una cosa, ¿cuál sería la que más cambia algo?
+Esa cosa va primero.
+Antes de los mensajes. Antes de las llamadas.
+Lo demás puede esperar una hora.
+Casi siempre puede.
+
+[03:30]
+Haz esto mañana.
+Antes de ver el teléfono, escribe una sola cosa.
+La que más cambia algo.
+Y hazla primero.
+
+[03:50]
+Una pregunta.
+¿Qué hiciste hoy que cambió algo?
+Escribe solo una cosa.
+
+[04:00]
+Hacer mucho no cambia nada.
+Hacer lo que vale, sí.
+Simple.
+Nos vemos la próxima semana."""
+D['2026-11-03']['ytl']=pub_steps({'kind':'pub','ep':'03','srt':False,'title':'Por qué no puedes soltar el teléfono','desc':EP3_DESC,
+  'pin':'¿Cuántas veces crees que lo tomaste hoy? Escribe solo el número.'})
+D['2026-11-04']['ytl']={'kind':'rec','ep':'04','title':'La pregunta que me hago cada mañana','script':EP4,
+  'sub':'Igual que siempre: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 10.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')

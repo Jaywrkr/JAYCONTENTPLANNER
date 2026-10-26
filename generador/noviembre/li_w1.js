@@ -1,0 +1,5 @@
+// LinkedIn semana 1: carrusel PDF (jueves 5)
+const { G, L, OUT } = require('./lib.js'); const { execSync } = require('child_process');
+const sl = [['5 preguntas antes de aceptar', 'un proyecto nuevo.'], ['01', '¿Qué problema resuelve', 'y para quién?'], ['02', '¿Qué pasa si no lo hacemos?'], ['03', '¿Quién lo lleva', 'y qué deja de hacer?'], ['04', '¿Cómo sabremos', 'que salió bien?'], ['Si no hay respuesta clara,', 'todavía no es un proyecto.']];
+(async () => { const fs = []; for (let i = 0; i < sl.length; i++) { const f = `li-1105-${String(i + 1).padStart(2, '0')}.jpg`; await G.render(1080, 1350, 'W', 0, (o, W, H) => { L.lab(o, '@jaywrkr', 90, 90); L.lab(o, String(i + 1).padStart(2, '0') + ' / ' + String(sl.length).padStart(2, '0'), W - 90, 90, 'right'); L.lines(o, W, H / 2, sl[i]); L.txt(o, 'simple.', W - 90, H - 90, 22, .45, 'right'); }, f); fs.push(OUT + '/' + f); }
+  execSync(`python3 -c "from PIL import Image; ims=[Image.open(p).convert('RGB') for p in ${JSON.stringify(fs).replace(/"/g, "'")}]; ims[0].save('${OUT}/li-1105.pdf', save_all=True, append_images=ims[1:], resolution=150)"`); console.log('ok'); })();
