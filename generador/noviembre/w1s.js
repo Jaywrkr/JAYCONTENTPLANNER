@@ -31,7 +31,7 @@ const S = {
     if (t > 5.8) { type(o, '¿Llegaste a tiempo?', CX, y + s + 110, 36, 5.8, t); type(o, 'Así se siente terminar algo.', CX, y + s + 166, 36, 7, t); } },
     init() { this.ticks = [2.2, 3.2, 4.2]; this.pops = [5.2]; } },
   'c1106-s': { dur: 10, bg: 'N', serie: 'fondo · nº 05', draw(o, t) {
-    const pw = 420, ph = 860, px = CX - pw / 2, py = CY - ph / 2 + 40; B(o, px, py, pw, ph, eo(pr(t, 0, .5)), 3);
+    const pw = 380, ph = 760, px = CX - pw / 2, py = CY - ph / 2; B(o, px, py, pw, ph, eo(pr(t, 0, .5)), 3);
     const lit = eo(pr(t, 2.4, 2.9)); if (lit > 0) { o.fillStyle = `rgba(255,255,255,${.06 * lit})`; o.fillRect(px + 3, py + 3, pw - 6, ph - 6); }
     T(o, t < 2.4 ? '06:59' : '07:00', CX, py + 150, 64, .9, 'center', 200);
     if (t > 3.1) type(o, 'Hazlo simple.', CX, py + ph / 2 + 40, 36, 3.1, t);

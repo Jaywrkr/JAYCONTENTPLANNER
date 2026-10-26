@@ -236,5 +236,183 @@ D['2026-11-03']['ytl']=pub_steps({'kind':'pub','ep':'03','srt':False,'title':'Po
   'pin':'¿Cuántas veces crees que lo tomaste hoy? Escribe solo el número.'})
 D['2026-11-04']['ytl']={'kind':'rec','ep':'04','title':'La pregunta que me hago cada mañana','script':EP4,
   'sub':'Igual que siempre: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 10.'}
+
+# ── Noviembre: ep04 pub, ep05–ep07
+def desc(a,b): return a+"\n"+b+"\n\n(capítulos: te llegan en el chat con el video)\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr"
+EP5="""[00:00]
+Abre tu teléfono.
+Mira cuántas cosas tienes a medias.
+Un curso. Un libro. Un proyecto.
+Una idea que ibas a empezar el lunes.
+Si son más de cinco, este video es para ti.
+
+[00:25]
+Empezar se siente bien.
+Todo es nuevo. Todo emociona.
+La primera semana vuela.
+La segunda ya cuesta un poco.
+Y en la tercera llega algo nuevo.
+Y empiezas de nuevo.
+
+[01:05]
+¿Por qué pasa?
+Porque lo nuevo no te pide nada.
+Lo que ya empezaste, sí.
+Te pide paciencia. Te pide la parte aburrida.
+Y la parte aburrida es justo la que hace que algo se termine.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es lo que pesa.
+Cada cosa a medias se queda contigo.
+En la cabeza. En la lista. En la culpa.
+Diez cosas a medias cansan más que una cosa hecha.
+No se ven. Pero pesan.
+
+[02:35]
+Esto es lo que hago.
+Elijo una sola cosa de la lista.
+La que esté más cerca del final.
+Y no empiezo nada nuevo hasta acabarla.
+Lo demás no se va. Solo espera.
+Una a la vez.
+Así de simple.
+
+[03:30]
+Haz esto hoy.
+Haz la lista de todo lo que tienes a medias.
+Elige la que está más cerca del final.
+Y dale media hora. Solo media hora.
+
+[03:50]
+Una pregunta.
+¿Cuántas cosas tienes a medias ahora mismo?
+Escribe solo el número.
+
+[04:00]
+Empezar es fácil.
+Lo que cuenta es acabarlo.
+Simple.
+Nos vemos la próxima semana."""
+EP6="""[00:00]
+Lunes en la mañana.
+Abres tus mensajes.
+Y tu semana ya tiene dueño.
+Juntas. Pedidos. Cosas de último minuto.
+Nada de eso lo elegiste tú.
+Hoy te cuento cómo pasa, y cómo lo evito.
+
+[00:25]
+Tu semana tiene un límite.
+Si no la llenas tú, se llena sola.
+Y se llena con lo que piden los demás.
+No es mala intención.
+Cada quien llena el espacio que ve vacío.
+
+[01:05]
+¿Por qué pasa?
+Porque lo de los demás tiene fecha.
+Lo tuyo, no.
+Y lo que tiene fecha siempre gana.
+Tu proyecto no tiene a nadie que pregunte por él.
+Así que siempre puede esperar.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es que no se nota.
+Una semana así, no pasa nada.
+Un mes así, tampoco.
+Pero un año así,
+y lo tuyo sigue igual.
+
+[02:35]
+Esto es lo que hago.
+El domingo, antes que nadie,
+pongo en mi calendario dos bloques.
+Dos horas para lo mío.
+Con nombre y con hora.
+Como si fuera una junta con alguien importante.
+Si alguien me pide ese espacio, ya está ocupado.
+Y es verdad. Está ocupado.
+
+[03:30]
+Haz esto hoy.
+Abre tu calendario.
+Pon un bloque esta semana solo para lo tuyo.
+Ponle nombre.
+Y defiéndelo como cualquier junta.
+
+[03:50]
+Una pregunta.
+¿Cuántas horas de esta semana elegiste tú?
+Escribe solo el número.
+
+[04:00]
+Tu semana se llena igual.
+La pregunta es con qué.
+Simple.
+Nos vemos la próxima semana."""
+EP7="""[00:00]
+Empiezas un hábito el lunes.
+Lo haces todos los días.
+Te sientes bien.
+Y a las dos semanas, se acabó.
+No pasó nada. Solo se acabó.
+Hoy te explico por qué, y qué hago yo.
+
+[00:25]
+Al inicio tienes ganas.
+Las ganas hacen todo fácil.
+Pero las ganas duran poco.
+Son como la batería del teléfono el lunes.
+Llena. Y se gasta.
+
+[01:05]
+¿Por qué pasa?
+Porque el hábito depende de las ganas.
+Y las ganas dependen de cómo dormiste,
+de cómo te fue, de mil cosas.
+Cuando un día no hay ganas, no hay hábito.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es lo que piensas después.
+Fallas un día y piensas: ya lo dañé.
+Y si ya lo dañé, ¿para qué sigo?
+Un día malo no acaba un hábito.
+Lo acaba pensar que sí.
+
+[02:35]
+Esto es lo que hago.
+Hago el hábito tan chico que no necesita ganas.
+No leo un capítulo. Leo una página.
+No hago una hora de ejercicio. Hago cinco minutos.
+Y tengo una sola condición:
+nunca dos días seguidos sin hacerlo.
+Un día fallas. Dos, no.
+
+[03:30]
+Haz esto hoy.
+Elige un hábito que dejaste.
+Hazlo tan chico que te dé vergüenza.
+Y hazlo hoy, solo eso.
+
+[03:50]
+Una pregunta.
+¿Qué hábito dejaste en la segunda semana?
+Escribe solo una palabra.
+
+[04:00]
+Las ganas se acaban.
+Lo chico se queda.
+Simple.
+Nos vemos la próxima semana."""
+SUB='En el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. '
+D['2026-11-10']['ytl']=pub_steps({'kind':'pub','ep':'04','srt':False,'title':'La pregunta que me hago cada mañana','desc':desc('Llegas a la noche cansado y no sabes qué avanzaste.','La diferencia entre ocupado y avanzar, y la pregunta que me hago antes de ver el teléfono.'),'pin':'¿Qué hiciste hoy que cambió algo? Escribe solo una cosa.'})
+D['2026-11-11']['ytl']={'kind':'rec','ep':'05','title':'Por qué tienes tantas cosas a medias','script':EP5,'sub':SUB+'Se publica el martes 17.'}
+D['2026-11-17']['ytl']=pub_steps({'kind':'pub','ep':'05','srt':False,'title':'Por qué tienes tantas cosas a medias','desc':desc('Un curso, un libro, un proyecto. Todo empezado, nada terminado.','Por qué pasa, lo que te cuesta sin que lo notes, y la regla simple que uso para acabar las cosas.'),'pin':'¿Cuántas cosas tienes a medias ahora mismo? Escribe solo el número.'})
+D['2026-11-18']['ytl']={'kind':'rec','ep':'06','title':'Si tú no llenas tu semana, alguien más lo hace','script':EP6,'sub':SUB+'Se publica el martes 24.'}
+D['2026-11-24']['ytl']=pub_steps({'kind':'pub','ep':'06','srt':False,'title':'Si tú no llenas tu semana, alguien más lo hace','desc':desc('El lunes abres los mensajes y tu semana ya tiene dueño.','Por qué lo tuyo siempre queda al final, y los dos bloques que pongo cada domingo.'),'pin':'¿Cuántas horas de esta semana elegiste tú? Escribe solo el número.'})
+D['2026-11-25']['ytl']={'kind':'rec','ep':'07','title':'Por qué tus hábitos duran dos semanas','script':EP7,'sub':SUB+'Se publica el martes 1 de diciembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')
