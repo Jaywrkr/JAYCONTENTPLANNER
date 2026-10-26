@@ -429,5 +429,11 @@ D['2026-11-17']['ytl']=pub_steps({'kind':'pub','ep':'05','srt':False,'endAt':'2:
 D['2026-11-18']['ytl']={'kind':'rec','ep':'06','title':'Si tú no llenas tu semana, alguien más lo hace','script':'Ya grabado y editado el 26 de octubre.','sub':'Nada que grabar hoy: el ep06 ya está listo. Se publica el martes 24.'}
 D['2026-11-24']['ytl']=pub_steps({'kind':'pub','ep':'06','srt':False,'endAt':'2:56','title':'Si tú no llenas tu semana, alguien más lo hace','desc':'El lunes abres los mensajes y tu semana ya tiene dueño.\nPor qué lo tuyo siempre queda al final, y los 15 minutos del domingo que lo cambian.\n\n0:00 Tu semana ya tiene dueño\n0:41 La semana que pasó\n1:04 El espacio vacío\n1:22 Lo peor\n1:48 Lo que hago\n2:26 Haz esto hoy\n2:47 Simple\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué vas a poner en esa hora? Escribe solo una cosa.'})
 D['2026-11-25']['ytl']={'kind':'rec','ep':'07','title':'Por qué tus hábitos duran dos semanas','script':EP7,'sub':SUB+'Se publica el martes 1 de diciembre.'}
+
+# Jay ya subió y programó ep02–ep06 (26 oct): solo quedan comentario fijado + historia
+for d in ['2026-10-27','2026-11-03','2026-11-10','2026-11-17','2026-11-24']:
+  E=D[d]['ytl']; E['steps']=[s for s in E['steps'] if s['id']=='y8']
+  E['steps'][0]['t']='YouTube · sale hoy 11:30 (ya programado) · comentario fijado + historia'
+  E['steps'][0]['b']=1
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')
