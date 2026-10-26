@@ -1,0 +1,22 @@
+0|mas|Una app más. Un hábito más. Un plan más.|Siempre queremos más, una aplicación más, un hábito más, un plan más
+0|pide|Cada cosa que sumas te pide algo.|y cada cosa que sumas te pide algo, tiempo, atención, ganas, dinero.
+0|resta|Lo que quitas vale más que lo que sumas.|Hoy te quiero mostrar por qué lo que quitas vale más que lo que sumas.
+1|semana|¿Cuántas cosas haces solo porque ya las hacías?|Piensa en tu semana, piensa cuántas cosas haces solo porque ya las hacías.
+1|inercia|Una llamada. Un grupo. Una app.|Una llamada que tal vez nadie necesita, un grupo que no lees, una aplicación que abres porque está ahí.
+1|words|Nada se ve grave. Pero suma.|Nada de eso se ve grave, pero suma.
+2|eqmin|10 min + 15 min + … = 2 horas al día.|Hagamos cuentas, 10 minutos aquí, 15 allá, al final del día son dos horas,
+2|mes|En un año, más de un mes.|en un año más de un mes completo, un mes de cosas que no elegiste,
+2|inv|Pero eso no es lo peor.|pero ya sabes, eso no es lo peor.
+3|key:tapa|Lo que sobra tapa lo que vale.|Lo peor es que lo que sobra tapa lo que vale.
+3|nocabe|Con el día lleno, lo que más quieres no cabe.|Con el día lleno, lo que más quieres no cabe, no hay dónde.
+3|strike:no tienes tiempo>lo llenaste|No es que no tengas tiempo. Lo llenaste.|Y no es que no tengas tiempo, es que lo llenaste con cosas que no pediste.
+4|words|Esto es lo que hago.|Ok, ahora, ¿yo qué hago? ¿Qué es lo que yo hago?
+4|lista|Una vez por semana, una lista: todo lo que me pide tiempo.|Una vez por semana, una vez a la semana hago una lista. Todo lo que me pide tiempo. Esa es la lista, todo lo que me pide tiempo.
+4|quote:Si hoy no lo tuviera, ¿lo buscaría?|Si hoy no lo tuviera, ¿lo buscaría?|Y a cada cosa le hago una pregunta. Si hoy no lo tuviera, ¿lo buscaría?
+4|seva|Si es no, se va. Sin culpa.|Si es que es no, se va. Sin culpa, sin sentirse culpable.
+4|una|Una cosa a la semana es suficiente.|No tienes que quitarlo todo. Una cosa a la semana es suficiente.
+5|type|Haz esto hoy.|Así que como paso accionable para el día de hoy, haz esto.
+5|quitar|Elige una cosa que haces sin ganas. Quítala.|Elige una cosa que haces sin ganas y quítala esta semana, pero quítala una.
+5|espacio|Vas a ver cuánto espacio ganas.|Vas a ver cuánto espacio ganas, cuánto tiempo ganas.
+6|type|¿Qué vas a quitar esta semana?|Así que por último, la pregunta, ¿qué vas tú a quitar esta semana? Déjalo acá.
+7|end|Simple.|Simple.

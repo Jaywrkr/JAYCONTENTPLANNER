@@ -96,9 +96,17 @@ EP1={'endAt':'4:08','kind':'pub','ep':'01','title':'Mañana + mañana + mañana 
   'pin':'¿Hay algo que llevas más de un mes posponiendo para mañana? Solo responde: sí.',
   'sub':'Sube el video que te mandé en el chat (ep01-youtube.mp4). Público · no es para niños · idioma español · categoría Educación. Pantalla final: un video + suscribirse sobre los dos recuadros. Luego fija el comentario y sube una historia con el link.'}
 D['2026-10-20']['ytl']=pub_steps(EP1)
-EP2_DESC="""Cada sí que das le quita horas a lo tuyo.\nCuánto te cuesta, por qué lo das, y la frase exacta para decir no sin que nadie se moleste.
+EP2_DESC="""Cada sí que das le quita horas a lo tuyo.
+Cuánto te cuesta, por qué lo das, y la frase exacta para decir no sin que nadie se moleste.
 
-(capítulos: te llegan en el chat con el video)
+0:00 Hoy dijiste que sí
+0:31 Cinco minutos
+1:04 Haz la cuenta
+1:26 Lo peor
+1:55 La frase
+2:48 Haz esto hoy
+3:05 Una pregunta
+3:19 Simple
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
@@ -162,7 +170,7 @@ Simple.
 Nos vemos la próxima semana."""
 D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'La frase que uso para decir no (sin quedar mal)','script':EP2,
   'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
-D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
+D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'endAt':'3:32','title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
   'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una palabra.'})
 D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Por qué no puedes soltar el teléfono','script':EP3,
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
@@ -170,7 +178,14 @@ D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Por qué no puedes solta
 EP3_DESC="""Tomas el teléfono sin decidirlo. Varias veces por hora.
 Por qué pasa, cuánto te cuesta, y lo único que hago para cortarlo (no es dejar el teléfono).
 
-(capítulos: te llegan en el chat con el video)
+0:00 Hoy lo desbloqueaste muchas veces
+0:20 Haz esta prueba
+0:40 No es del todo tu culpa
+1:09 Lo peor
+1:40 Lo que hago
+2:06 Haz esto hoy
+2:17 Una pregunta
+2:30 Simple
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
@@ -232,7 +247,7 @@ Hacer mucho no cambia nada.
 Hacer lo que vale, sí.
 Simple.
 Nos vemos la próxima semana."""
-D['2026-11-03']['ytl']=pub_steps({'kind':'pub','ep':'03','srt':False,'title':'Por qué no puedes soltar el teléfono','desc':EP3_DESC,
+D['2026-11-03']['ytl']=pub_steps({'kind':'pub','ep':'03','srt':False,'endAt':'2:38','title':'Por qué no puedes soltar el teléfono','desc':EP3_DESC,
   'pin':'¿Cuántas veces crees que lo tomaste hoy? Escribe solo el número.'})
 D['2026-11-04']['ytl']={'kind':'rec','ep':'04','title':'La pregunta que me hago cada mañana','script':EP4,
   'sub':'Igual que siempre: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 10.'}
@@ -408,11 +423,11 @@ Lo chico se queda.
 Simple.
 Nos vemos la próxima semana."""
 SUB='En el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. '
-D['2026-11-10']['ytl']=pub_steps({'kind':'pub','ep':'04','srt':False,'title':'La pregunta que me hago cada mañana','desc':desc('Llegas a la noche cansado y no sabes qué avanzaste.','La diferencia entre ocupado y avanzar, y la pregunta que me hago antes de ver el teléfono.'),'pin':'¿Qué hiciste hoy que cambió algo? Escribe solo una cosa.'})
-D['2026-11-11']['ytl']={'kind':'rec','ep':'05','title':'Por qué tienes tantas cosas a medias','script':EP5,'sub':SUB+'Se publica el martes 17.'}
-D['2026-11-17']['ytl']=pub_steps({'kind':'pub','ep':'05','srt':False,'title':'Por qué tienes tantas cosas a medias','desc':desc('Un curso, un libro, un proyecto. Todo empezado, nada terminado.','Por qué pasa, lo que te cuesta sin que lo notes, y la regla simple que uso para acabar las cosas.'),'pin':'¿Cuántas cosas tienes a medias ahora mismo? Escribe solo el número.'})
-D['2026-11-18']['ytl']={'kind':'rec','ep':'06','title':'Si tú no llenas tu semana, alguien más lo hace','script':EP6,'sub':SUB+'Se publica el martes 24.'}
-D['2026-11-24']['ytl']=pub_steps({'kind':'pub','ep':'06','srt':False,'title':'Si tú no llenas tu semana, alguien más lo hace','desc':desc('El lunes abres los mensajes y tu semana ya tiene dueño.','Por qué lo tuyo siempre queda al final, y los dos bloques que pongo cada domingo.'),'pin':'¿Cuántas horas de esta semana elegiste tú? Escribe solo el número.'})
+D['2026-11-10']['ytl']=pub_steps({'kind':'pub','ep':'04','srt':False,'title':'La pregunta que me hago cada mañana','endAt':'2:49','desc':'Llegas a la noche cansado y no sabes qué avanzaste.\nLa diferencia entre ocupado y avanzar, y la pregunta que me hago antes de ver el teléfono.\n\n0:00 Hay días en los que no paras\n0:30 Ocupado no es avanzar\n0:59 Por qué pasa\n1:22 Lo peor\n1:40 La pregunta\n2:20 Haz esto mañana\n2:39 Simple\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué hiciste hoy que cambió algo? Escribe solo una cosa.'})
+D['2026-11-11']['ytl']={'kind':'rec','ep':'05','title':'Lo que quitas vale más que lo que sumas','script':'Ya grabado y editado el 26 de octubre.','sub':'Nada que grabar hoy: el ep05 ya está listo. Se publica el martes 17.'}
+D['2026-11-17']['ytl']=pub_steps({'kind':'pub','ep':'05','srt':False,'endAt':'2:31','title':'Lo que quitas vale más que lo que sumas','desc':'Una app más, un hábito más, un plan más. Cada cosa que sumas te pide algo.\nPor qué lo que quitas vale más, y la pregunta que me hago cada semana para soltar lo que sobra.\n\n0:00 Siempre queremos más\n0:27 Piensa en tu semana\n0:47 Haz la cuenta\n1:03 Lo peor\n1:23 Lo que hago\n1:58 Haz esto hoy\n2:17 Una pregunta\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué vas a quitar esta semana? Escribe solo una cosa.'})
+D['2026-11-18']['ytl']={'kind':'rec','ep':'06','title':'Si tú no llenas tu semana, alguien más lo hace','script':'Ya grabado y editado el 26 de octubre.','sub':'Nada que grabar hoy: el ep06 ya está listo. Se publica el martes 24.'}
+D['2026-11-24']['ytl']=pub_steps({'kind':'pub','ep':'06','srt':False,'endAt':'2:56','title':'Si tú no llenas tu semana, alguien más lo hace','desc':'El lunes abres los mensajes y tu semana ya tiene dueño.\nPor qué lo tuyo siempre queda al final, y los 15 minutos del domingo que lo cambian.\n\n0:00 Tu semana ya tiene dueño\n0:41 La semana que pasó\n1:04 El espacio vacío\n1:22 Lo peor\n1:48 Lo que hago\n2:26 Haz esto hoy\n2:47 Simple\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué vas a poner en esa hora? Escribe solo una cosa.'})
 D['2026-11-25']['ytl']={'kind':'rec','ep':'07','title':'Por qué tus hábitos duran dos semanas','script':EP7,'sub':SUB+'Se publica el martes 1 de diciembre.'}
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')

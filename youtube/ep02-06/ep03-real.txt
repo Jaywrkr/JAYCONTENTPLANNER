@@ -1,0 +1,34 @@
+0|unlock|Hoy desbloqueaste tu teléfono muchas veces.|Hoy desbloqueaste tu teléfono infinidad de veces, muchísimas veces, más de las que crees.
+0|key:decisión|Casi ninguna fue una decisión.|Y casi ninguna de esas fue una decisión.
+0|type|Te doy lo que hago para que no pase.|Te voy a dar una cosa que hago para que eso no suceda.
+0|strike:candado>no|Y no, no es ponerle candado.|Y no, no es dejar el teléfono ponerle candado o algo similar.
+1|words|Haz esta prueba.|Haz esta prueba.
+1|ultima|La última vez que tomaste el celular…|Piensa cuándo fue o piensa en esa última vez que tomaste el celular.
+1|qmark|¿Qué ibas a hacer?|¿Qué ibas a hacer?
+1|words|Muchas veces ni lo sabes.|Muchas veces ni sabes qué ibas a hacer.
+1|mano|La mano llega antes que el cerebro.|Lo tomaste porque simplemente estaba ahí o porque la mano llega antes que el cerebro y simplemente cogiste el celular.
+2|key:no es tu culpa|No es del todo tu culpa.|Y digamos que no es tu culpa del todo,
+2|words|Cada app está hecha para que vuelvas.|porque lamentablemente cada aplicación está hecha para que vuelvas.
+2|badges|Un color. Un número en la esquina. Un sonido.|Digamos algo de color, un número en la esquina, un sonido.
+2|empresas|Hay gente pagada para que no la sueltes.|Del lado de la app piensa que hay empresas enormes que pagan a gente para que hagan todo lo posible para que tú no sueltes la aplicación y por ende no sueltes el teléfono.
+2|inv|Pero eso no es lo peor.|Pero eso no es lo peor.
+3|words|Lo peor es lo que pasa después.|Lo peor es lo que pasa después.
+3|deja|Tu cabeza deja lo que estaba haciendo.|Cada vez que miras el móvil tu cabeza deja lo que estaba haciendo
+3|volver|Volver cuesta tiempo.|y lamentablemente volver a lo que estabas haciendo cuesta tiempo.
+3|words|Hagamos cuentas.|Hagamos cuentas.
+3|eq50|50 veces × 2 minutos = 100 minutos.|Si lo tomas 50 veces y se van dos minutos cada vez son 100 minutos al día.
+3|bar2h|Casi dos horas que no son tuyas.|Casi son dos horas que no son tuyas.
+4|strike:el teléfono>la mano|El problema no es el teléfono. Es que está a la mano.|El teléfono no es el problema. El problema es que está a la mano.
+4|words|Esto es lo que hago.|Así que esto es lo que hago.
+4|lejos|Cuando hago algo que vale, lo alejo.|Cuando hago algo que realmente vale el teléfono lo pongo en el bolsillo.
+4|lugares|Un cajón. La mochila. La cocina.|Fuera de la vista. En un cajón tal vez o en la mochila o en la cocina.
+4|nolista|No lo apago. No lo bloqueo. Solo lo alejo.|No lo apago, no lo bloqueo, solo lo alejo por un momento.
+4|key:automático|Si tienes que ir a buscarlo, ya no es automático.|Si tienes que ir a buscarlo ya no es automático. Ok?
+5|type|Haz esto hoy.|Así que haz esto hoy.
+5|hora|Una hora. El teléfono lejos.|Una hora el teléfono lejos. Solo una hora.
+5|busca|Vas a ver cuántas veces tu mano lo busca.|Vas a ver cuántas veces tu mano lo busca. Te vas hasta asustar.
+6|words|Una pregunta.|Así que por último te dejo una sola pregunta a ti.
+6|type|¿Cuántas veces lo tomaste hoy?|¿Cuántas veces crees que tomaste el móvil hoy?
+6|num|Escribe solo el número.|Déjalo acá. Escribe solo el número y nada más.
+7|words|Lejos de la vista, lejos de la mano.|Recuerda lejos de la vista, lejos de la mano.
+7|end|Simple.|Simple.
