@@ -1,0 +1,1 @@
+const P = require('./wm.js'); require('fs').writeFileSync(__dirname + '/wm-meta.json', JSON.stringify(P.map(d => ({ d: d.d, s: d.s, n: d.n, A: { th: d.A.th, title: d.A.title, cap: d.A.cap }, B: { th: d.B.th, title: d.B.title, cap: d.B.cap } })))); console.log('dumped', P.length);

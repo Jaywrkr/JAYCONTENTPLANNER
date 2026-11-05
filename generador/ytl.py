@@ -96,17 +96,344 @@ EP1={'endAt':'4:08','kind':'pub','ep':'01','title':'Mañana + mañana + mañana 
   'pin':'¿Hay algo que llevas más de un mes posponiendo para mañana? Solo responde: sí.',
   'sub':'Sube el video que te mandé en el chat (ep01-youtube.mp4). Público · no es para niños · idioma español · categoría Educación. Pantalla final: un video + suscribirse sobre los dos recuadros. Luego fija el comentario y sube una historia con el link.'}
 D['2026-10-20']['ytl']=pub_steps(EP1)
-EP2_DESC="""Cada sí que das le quita horas a lo tuyo.\nCuánto te cuesta, por qué lo das, y la frase exacta para decir no sin que nadie se moleste.
+EP2_DESC="""Cada sí que das le quita horas a lo tuyo.
+Cuánto te cuesta, por qué lo das, y la frase exacta para decir no sin que nadie se moleste.
 
-(capítulos: te llegan en el chat con el video)
+0:00 Hoy dijiste que sí
+0:31 Cinco minutos
+1:04 Haz la cuenta
+1:26 Lo peor
+1:55 La frase
+2:48 Haz esto hoy
+3:05 Una pregunta
+3:19 Simple
 
 Una verdad incómoda cada semana, explicada simple.
 Instagram: @jaywrkr"""
+EP3="""[00:00]
+Hoy desbloqueaste tu teléfono muchas veces.
+Más de las que crees.
+Y casi ninguna fue una decisión.
+Te voy a dar una cosa que hago para que eso no pase.
+Y no es dejar el teléfono.
+
+[00:20]
+Haz esta prueba.
+Piensa en la última vez que lo tomaste.
+¿Qué ibas a hacer?
+Muchas veces no sabes.
+Lo tomaste porque estaba ahí.
+La mano llega antes que la idea.
+
+[01:00]
+Y no es tu culpa del todo.
+Cada app está hecha para que vuelvas.
+Un punto de color.
+Un número en la esquina.
+Un sonido.
+Del lado de la app hay gente pagada para que no lo sueltes.
+Pero eso no es lo peor.
+
+[01:45]
+Lo peor es lo que pasa después.
+Cada vez que lo miras, tu cabeza deja lo que hacías.
+Y volver a lo que hacías cuesta minutos.
+Haz la cuenta:
+Si lo tomas cincuenta veces y se van dos minutos cada vez,
+son cien minutos al día.
+Casi dos horas que no son tuyas.
+
+[02:40]
+El teléfono no es el problema.
+El problema es que está a la mano.
+Así que esto es lo que hago:
+Cuando hago algo que vale, el teléfono va lejos.
+Fuera de la vista. En un cajón, en la mochila, en la cocina.
+No lo apago. No lo bloqueo.
+Solo lo alejo.
+Si tienes que ir a buscarlo, ya no es automático.
+
+[03:30]
+Haz esto hoy.
+Una hora. El teléfono lejos.
+Solo una hora.
+Vas a ver cuántas veces tu mano lo busca.
+
+[03:50]
+Una pregunta.
+¿Cuántas veces crees que lo tomaste hoy?
+Escribe solo el número.
+
+[04:00]
+Lejos de la vista. Lejos de la mano.
+Simple.
+Nos vemos la próxima semana."""
 D['2026-10-21']['ytl']={'kind':'rec','ep':'02','title':'La frase que uso para decir no (sin quedar mal)','script':EP2,
   'sub':'En el auto, motor y aire apagados. Notas de voz en Sin pérdida, iPhone a 15–20 cm, a un lado de la boca. Una línea, 2 segundos de pausa. Si te equivocas, repite la línea. Al terminar, mándame el audio y la transcripción de Notas de voz por el chat. Se publica el martes 27.'}
-D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
+D['2026-10-27']['ytl']=pub_steps({'kind':'pub','ep':'02','srt':False,'endAt':'3:32','title':'La frase que uso para decir no (sin quedar mal)','desc':EP2_DESC,
   'pin':'¿A qué le dijiste sí esta semana sin quererlo? Escribe solo una palabra.'})
-D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Episodio 03 · Atención','script':'(El guion llega el lunes 26 en el chat, después de la revisión semanal. Pilar: atención — tema propuesto: Tu celular no es el problema.)',
+D['2026-10-28']['ytl']={'kind':'rec','ep':'03','title':'Por qué no puedes soltar el teléfono','script':EP3,
   'sub':'Igual que el 02: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 3 de noviembre.'}
+
+EP3_DESC="""Tomas el teléfono sin decidirlo. Varias veces por hora.
+Por qué pasa, cuánto te cuesta, y lo único que hago para cortarlo (no es dejar el teléfono).
+
+0:00 Hoy lo desbloqueaste muchas veces
+0:20 Haz esta prueba
+0:40 No es del todo tu culpa
+1:09 Lo peor
+1:40 Lo que hago
+2:06 Haz esto hoy
+2:17 Una pregunta
+2:30 Simple
+
+Una verdad incómoda cada semana, explicada simple.
+Instagram: @jaywrkr"""
+EP4="""[00:00]
+Hay días en los que no paras.
+Llamadas, mensajes, pendientes.
+Llegas a la noche cansado.
+Y si alguien te pregunta qué avanzaste,
+te quedas en blanco.
+Hoy te doy la pregunta que uso para que eso no pase.
+
+[00:25]
+Estar ocupado se siente bien.
+Te sientes útil.
+Pero hay una diferencia simple.
+Ocupado es llenar el día.
+Avanzar es que algo cambie.
+Puedes llenar el día y que nada cambie.
+
+[01:05]
+¿Por qué pasa?
+Porque lo que llega en el momento se ve más.
+Un mensaje se ve. Una llamada se ve.
+Lo que más vale casi nunca te escribe.
+No suena. No avisa.
+Así que lo dejas para después.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es que el cansancio es el mismo.
+Un día ocupado y un día que avanza cansan igual.
+La diferencia es lo que queda.
+Uno deja más pendientes.
+El segundo deja algo hecho.
+
+[02:35]
+Ahora, la pregunta.
+Cada mañana, antes de ver los mensajes,
+me pregunto esto:
+Si hoy solo hago una cosa, ¿cuál sería la que más cambia algo?
+Esa cosa va primero.
+Antes de los mensajes. Antes de las llamadas.
+Lo demás puede esperar una hora.
+Casi siempre puede.
+
+[03:30]
+Haz esto mañana.
+Antes de ver el teléfono, escribe una sola cosa.
+La que más cambia algo.
+Y hazla primero.
+
+[03:50]
+Una pregunta.
+¿Qué hiciste hoy que cambió algo?
+Escribe solo una cosa.
+
+[04:00]
+Hacer mucho no cambia nada.
+Hacer lo que vale, sí.
+Simple.
+Nos vemos la próxima semana."""
+D['2026-11-03']['ytl']=pub_steps({'kind':'pub','ep':'03','srt':False,'endAt':'2:38','title':'Por qué no puedes soltar el teléfono','desc':EP3_DESC,
+  'pin':'¿Cuántas veces crees que lo tomaste hoy? Escribe solo el número.'})
+D['2026-11-04']['ytl']={'kind':'rec','ep':'04','title':'La pregunta que me hago cada mañana','script':EP4,
+  'sub':'Igual que siempre: en el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. Se publica el martes 10.'}
+
+# ── Noviembre: ep04 pub, ep05–ep07
+def desc(a,b): return a+"\n"+b+"\n\n(capítulos: te llegan en el chat con el video)\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr"
+EP5="""[00:00]
+Abre tu teléfono.
+Mira cuántas cosas tienes a medias.
+Un curso. Un libro. Un proyecto.
+Una idea que ibas a empezar el lunes.
+Si son más de cinco, este video es para ti.
+
+[00:25]
+Empezar se siente bien.
+Todo es nuevo. Todo emociona.
+La primera semana vuela.
+La segunda ya cuesta un poco.
+Y en la tercera llega algo nuevo.
+Y empiezas de nuevo.
+
+[01:05]
+¿Por qué pasa?
+Porque lo nuevo no te pide nada.
+Lo que ya empezaste, sí.
+Te pide paciencia. Te pide la parte aburrida.
+Y la parte aburrida es justo la que hace que algo se termine.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es lo que pesa.
+Cada cosa a medias se queda contigo.
+En la cabeza. En la lista. En la culpa.
+Diez cosas a medias cansan más que una cosa hecha.
+No se ven. Pero pesan.
+
+[02:35]
+Esto es lo que hago.
+Elijo una sola cosa de la lista.
+La que esté más cerca del final.
+Y no empiezo nada nuevo hasta acabarla.
+Lo demás no se va. Solo espera.
+Una a la vez.
+Así de simple.
+
+[03:30]
+Haz esto hoy.
+Haz la lista de todo lo que tienes a medias.
+Elige la que está más cerca del final.
+Y dale media hora. Solo media hora.
+
+[03:50]
+Una pregunta.
+¿Cuántas cosas tienes a medias ahora mismo?
+Escribe solo el número.
+
+[04:00]
+Empezar es fácil.
+Lo que cuenta es acabarlo.
+Simple.
+Nos vemos la próxima semana."""
+EP6="""[00:00]
+Lunes en la mañana.
+Abres tus mensajes.
+Y tu semana ya tiene dueño.
+Juntas. Pedidos. Cosas de último minuto.
+Nada de eso lo elegiste tú.
+Hoy te cuento cómo pasa, y cómo lo evito.
+
+[00:25]
+Tu semana tiene un límite.
+Si no la llenas tú, se llena sola.
+Y se llena con lo que piden los demás.
+No es mala intención.
+Cada quien llena el espacio que ve vacío.
+
+[01:05]
+¿Por qué pasa?
+Porque lo de los demás tiene fecha.
+Lo tuyo, no.
+Y lo que tiene fecha siempre gana.
+Tu proyecto no tiene a nadie que pregunte por él.
+Así que siempre puede esperar.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es que no se nota.
+Una semana así, no pasa nada.
+Un mes así, tampoco.
+Pero un año así,
+y lo tuyo sigue igual.
+
+[02:35]
+Esto es lo que hago.
+El domingo, antes que nadie,
+pongo en mi calendario dos bloques.
+Dos horas para lo mío.
+Con nombre y con hora.
+Como si fuera una junta con alguien importante.
+Si alguien me pide ese espacio, ya está ocupado.
+Y es verdad. Está ocupado.
+
+[03:30]
+Haz esto hoy.
+Abre tu calendario.
+Pon un bloque esta semana solo para lo tuyo.
+Ponle nombre.
+Y defiéndelo como cualquier junta.
+
+[03:50]
+Una pregunta.
+¿Cuántas horas de esta semana elegiste tú?
+Escribe solo el número.
+
+[04:00]
+Tu semana se llena igual.
+La pregunta es con qué.
+Simple.
+Nos vemos la próxima semana."""
+EP7="""[00:00]
+Empiezas un hábito el lunes.
+Lo haces todos los días.
+Te sientes bien.
+Y a las dos semanas, se acabó.
+No pasó nada. Solo se acabó.
+Hoy te explico por qué, y qué hago yo.
+
+[00:25]
+Al inicio tienes ganas.
+Las ganas hacen todo fácil.
+Pero las ganas duran poco.
+Son como la batería del teléfono el lunes.
+Llena. Y se gasta.
+
+[01:05]
+¿Por qué pasa?
+Porque el hábito depende de las ganas.
+Y las ganas dependen de cómo dormiste,
+de cómo te fue, de mil cosas.
+Cuando un día no hay ganas, no hay hábito.
+Pero eso no es lo peor.
+
+[01:50]
+Lo peor es lo que piensas después.
+Fallas un día y piensas: ya lo dañé.
+Y si ya lo dañé, ¿para qué sigo?
+Un día malo no acaba un hábito.
+Lo acaba pensar que sí.
+
+[02:35]
+Esto es lo que hago.
+Hago el hábito tan chico que no necesita ganas.
+No leo un capítulo. Leo una página.
+No hago una hora de ejercicio. Hago cinco minutos.
+Y tengo una sola condición:
+nunca dos días seguidos sin hacerlo.
+Un día fallas. Dos, no.
+
+[03:30]
+Haz esto hoy.
+Elige un hábito que dejaste.
+Hazlo tan chico que te dé vergüenza.
+Y hazlo hoy, solo eso.
+
+[03:50]
+Una pregunta.
+¿Qué hábito dejaste en la segunda semana?
+Escribe solo una palabra.
+
+[04:00]
+Las ganas se acaban.
+Lo chico se queda.
+Simple.
+Nos vemos la próxima semana."""
+SUB='En el auto, Notas de voz en Sin pérdida, una línea y 2 segundos de pausa. Mándame audio + transcripción. '
+D['2026-11-10']['ytl']=pub_steps({'kind':'pub','ep':'04','srt':False,'title':'La pregunta que me hago cada mañana','endAt':'2:49','desc':'Llegas a la noche cansado y no sabes qué avanzaste.\nLa diferencia entre ocupado y avanzar, y la pregunta que me hago antes de ver el teléfono.\n\n0:00 Hay días en los que no paras\n0:30 Ocupado no es avanzar\n0:59 Por qué pasa\n1:22 Lo peor\n1:40 La pregunta\n2:20 Haz esto mañana\n2:39 Simple\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué hiciste hoy que cambió algo? Escribe solo una cosa.'})
+D['2026-11-11']['ytl']={'kind':'rec','ep':'05','title':'Lo que quitas vale más que lo que sumas','script':'Ya grabado y editado el 26 de octubre.','sub':'Nada que grabar hoy: el ep05 ya está listo. Se publica el martes 17.'}
+D['2026-11-17']['ytl']=pub_steps({'kind':'pub','ep':'05','srt':False,'endAt':'2:31','title':'Lo que quitas vale más que lo que sumas','desc':'Una app más, un hábito más, un plan más. Cada cosa que sumas te pide algo.\nPor qué lo que quitas vale más, y la pregunta que me hago cada semana para soltar lo que sobra.\n\n0:00 Siempre queremos más\n0:27 Piensa en tu semana\n0:47 Haz la cuenta\n1:03 Lo peor\n1:23 Lo que hago\n1:58 Haz esto hoy\n2:17 Una pregunta\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué vas a quitar esta semana? Escribe solo una cosa.'})
+D['2026-11-18']['ytl']={'kind':'rec','ep':'06','title':'Si tú no llenas tu semana, alguien más lo hace','script':'Ya grabado y editado el 26 de octubre.','sub':'Nada que grabar hoy: el ep06 ya está listo. Se publica el martes 24.'}
+D['2026-11-24']['ytl']=pub_steps({'kind':'pub','ep':'06','srt':False,'endAt':'2:56','title':'Si tú no llenas tu semana, alguien más lo hace','desc':'El lunes abres los mensajes y tu semana ya tiene dueño.\nPor qué lo tuyo siempre queda al final, y los 15 minutos del domingo que lo cambian.\n\n0:00 Tu semana ya tiene dueño\n0:41 La semana que pasó\n1:04 El espacio vacío\n1:22 Lo peor\n1:48 Lo que hago\n2:26 Haz esto hoy\n2:47 Simple\n\nUna verdad incómoda cada semana, explicada simple.\nInstagram: @jaywrkr','pin':'¿Qué vas a poner en esa hora? Escribe solo una cosa.'})
+D['2026-11-25']['ytl']={'kind':'rec','ep':'07','title':'Por qué tus hábitos duran dos semanas','script':EP7,'sub':SUB+'Se publica el martes 1 de diciembre.'}
+
+# Jay ya subió y programó ep02–ep06 (26 oct): solo quedan comentario fijado + historia
+for d in ['2026-10-27','2026-11-03','2026-11-10','2026-11-17','2026-11-24']:
+  E=D[d]['ytl']; E['steps']=[s for s in E['steps'] if s['id']=='y8']
+  E['steps'][0]['t']='YouTube · sale hoy 11:30 (ya programado) · comentario fijado + historia'
+  E['steps'][0]['b']=1
 json.dump(p,open('plan.json','w'),ensure_ascii=False)
 print('ok')

@@ -1,0 +1,28 @@
+0|clock|Lunes en la mañana.|El lunes en la mañana,
+0|key:dueño|Tu semana ya tiene dueño.|tu semana puede que ya tenga dueño,
+0|ajenos|Llamadas. Pendientes. Cosas de alguien más.|puede que ese dueño sean llamadas, pendientes, cosas de alguien más
+0|final|Lo tuyo queda para el final de la semana.|y lo tuyo, lo que tú tenías que hacer queda para el final de la semana que casi nunca llega.
+0|bateria|Y cuando llega, ya estás cansado.|Y cuando llega ya estás cansado, ya es el fin de la semana, ya no quieres más.
+0|type|Al final: los 15 minutos del domingo.|Así que al final de este video te voy a mostrar los 15 minutos del domingo que vas a invertir, cómo van a hacer que todo esto cambie.
+1|words|Piensa en la semana que pasó.|Piensa en la semana que pasó,
+1|elegiste|¿Cuánto de lo que hiciste lo elegiste tú?|piensa cuánto de lo que hiciste realmente tú lo elegiste.
+1|llego|Casi todo llegó solo.|Estoy casi seguro que casi todo llegó solo. Alguien te pidió algo, alguien te escribió, la costumbre te hizo hacer algo.
+1|inv|Una semana sin plan se llena con el plan de alguien más.|Así que por ende, una semana sin plan se llena con el plan de alguien más.
+2|strike:falta de disciplina>espacio vacío|No es falta de disciplina. El espacio vacío no dura.|Y como tal no es falta de disciplina, es que el espacio vacío no dura.
+2|vacio|Si tú no lo llenas, lo llena el que pide.|Si tú no lo llenas, lo llena el que pide algo más.
+2|inv|Pero eso no es lo peor.|Pero ya sabes, eso no es lo peor.
+3|key:nunca pide|Lo peor: lo tuyo nunca pide.|Lo peor es que lo tuyo nunca pide.
+3|mudo|Tu proyecto no escribe. Tu salud no llama. Tu idea no avisa.|Tu proyecto no te manda mensajes. Tu salud no te llama a no ser que ya realmente sea algo grave. Tu idea no te escribe a las 9 de la noche.
+3|bateria2|Por eso queda al final. Sin energía. Sin espacio.|Por eso siempre quedan al final. Y al final casi siempre ya no hay energía, ya no hay espacio.
+4|words|Esto es lo que hago.|Ahora, ¿qué hago yo? ¿Qué es lo que yo hago?
+4|domingo|Domingo. 15 minutos. Calendario.|El domingo 15 minutos abro el calendario que tengo de la semana
+4|bloques|Antes que lo de los demás, pongo lo mío.|y antes de que llegue lo de los demás, pongo lo mío.
+4|bloque|Un bloque por día. Una hora con nombre.|Un bloque por día, una hora con nombre, con día, con hora.
+4|cita|Lo cuido como una cita con un cliente.|Ese bloque se cuida como una cita con un cliente.
+4|ocupado|Si alguien pide esa hora: ya está ocupada.|Si alguien pide esa hora, ya está ocupada. Veamos si es que lo que tengo que hacer contigo es más importante que lo otro, o si no de por sí ya está ocupado.
+5|type|Haz esto hoy.|Así que haz esto hoy.
+5|unahora|Abre tu calendario. Una hora para lo tuyo.|Abre tu calendario, pon una hora para lo tuyo esta semana. Solo una con nombre y listo.
+6|words|Una pregunta.|Por último, solo te hago una pregunta,
+6|type|¿Qué vas a poner en esa hora?|¿Qué vas a poner en esa hora? Déjalo acá y nada más.
+7|words|Si tú no llenas tu semana, alguien más lo hace.|Recuerda, si tú no llenas tu semana, alguien más lo va a hacer.
+7|end|Simple.|Simple.

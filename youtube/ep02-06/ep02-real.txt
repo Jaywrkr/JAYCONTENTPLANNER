@@ -1,0 +1,46 @@
+0|sies|Hoy dijiste que sí. Varias veces.|Hoy dijiste que sí, varias veces
+0|key:tiempo|Uno de esos sí te va a quitar mucho tiempo.|y estoy casi seguro que uno de esos sí te va a quitar mucho tiempo.
+0|semana|Capaz te quita una semana entera.|Capaz te quita hasta toda una semana de trabajo.
+0|words|No lo notas. No duele en el momento.|A veces no lo notas, pero sobre todo porque no duele en el momento mismo.
+0|type|Al final, la frase exacta que uso.|Al final, créeme, te voy a dar una frase exacta que uso yo cuando no quiero algo
+0|inv|Y nadie se molesta.|y tampoco quiero que alguien se moleste.
+1|clock|Lunes. 9 de la mañana.|Imagínate, el lunes, 9 de la mañana,
+1|msg|¿Tienes cinco minutos?|te escriben y te preguntan ¿cómo vas? Tienes cinco minutos,
+1|llamada|Te hacen la llamada.|te hacen la llamada,
+1|cinco|5 minutos → 1 hora.|hablas cinco minutos, no son cinco minutos, pasa a ser una hora.
+1|msgs|Un mensaje. Y uno más. Y otro.|Después llega un mensaje y uno más y luego otro.
+1|words|Hiciste mucho más de lo que te pidieron.|Y al final del día hiciste mucho más de lo que en teoría te pidieron, cinco minutos.
+1|tuyo|Y nada de lo tuyo.|Y puede que no hiciste absolutamente nada de lo que tenías tú que hacer, nada de lo tuyo.
+2|words|Hagamos cuentas.|Entonces, yo te digo, hagamos cuentas.
+2|eq1|Un sí de una hora es una hora menos de lo tuyo.|Un sí de una hora es una hora menos de lo tuyo.
+2|eq5|Cinco al día son cinco horas.|Cinco al día son cinco horas, obviamente.
+2|count25|En una semana, 25 horas.|En una semana si son cinco horas al día son 25 horas.
+2|grid40|Más de media semana de tu tiempo.|Es más de media semana de tu tiempo.
+2|inv|Pero eso ni siquiera es lo peor.|Pero eso ni siquiera es lo peor.
+3|key:no querías|Lo peor: casi nunca querías hacerlo.|Lo peor es que casi nunca querías hacer eso.
+3|strike:no>sí|Dijiste sí porque el no se sentía mal.|Dijiste tal vez sí, porque el no se sentía mal,
+3|words|No quieres que piensen mal de ti.|porque tal vez no quieres que piensen mal de ti.
+3|pagas|Pagas con tu tiempo|Así que en teoría pagas con tu tiempo
+3|count10|para que alguien no se moleste diez segundos.|para que alguien no se moleste, tal vez dos, cinco, 10 segundos.
+3|eqpaga|Haz esa cuenta también.|Así que haz esa cuenta también.
+4|words|Ahora, la frase.|Ahora, la frase, la frase que digo,
+4|pausa|Cuando te pidan algo, no contestes en el momento.|cuando te pidan algo, simplemente no contestes en el momento.
+4|words|Esa es la primera parte.|Esa es la primera parte de la frase.
+4|quote:Déjame ver y te aviso.|Di esto: déjame ver y te aviso.|Di esto, déjame ver y te aviso.
+4|devuelve|Esa pausa te devuelve la decisión.|Créeme que esa pausa te devuelve la decisión.
+4|words|Y si es no, y estás seguro:|Y si es que es no, y si realmente estás seguro que quieres decir no puedes decir así,
+4|quote:Ahora no puedo. Lo vemos después.|Ahora no puedo. Lo vemos después.|mira ahora no puedo, tal vez lo vemos después.
+4|key:con fecha|Es un no, pero con fecha.|¿Ya? Es un no, pero con una posible fecha.
+4|words|Ficticia, pero fecha.|Ficticia, pero fecha.
+4|words|Nadie se molesta con un “luego vemos”.|Nadie se molesta cuando te dicen, ok, luego vemos.
+4|olvido|Cuando llega ese luego, ya nadie se acuerda.|Y muchas cosas para ese, luego vemos cuando llegue ese luego ya ni se acuerdan, ya ni hacen falta.
+5|type|Haz esto hoy.|Entonces, ¿qué puedes hacer hoy? Haz esto hoy.
+5|words|Antes de dar un sí, espera.|Antes de dar un sí, espera.
+5|timer|Un minuto. Solo un minuto.|espera un tiempo, un minuto Solo un minuto.
+5|siesno|Vas a ver cuántos sí no eran tuyos.|Vas a ver cuántos sí, la verdad no eran tuyos.
+6|words|Una pregunta.|Así que como por último, te hago una pregunta.
+6|type|¿A qué le dijiste sí sin querer?|¿Tú a qué le dijiste sí esta semana sin querer decir sí?
+6|qa|Escribe solo una palabra.|Escribe acá en los comentarios solo una palabra.
+7|words|Cada sí cuesta algo.|Así que, por último, cada sí cuesta algo.
+7|key:elige|Elige qué pagas.|Elige qué pagas.
+7|end|Simple.|Simple.

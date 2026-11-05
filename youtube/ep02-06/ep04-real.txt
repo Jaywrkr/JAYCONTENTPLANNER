@@ -1,0 +1,30 @@
+0|nonstop|Hay días en los que no paras.|Hay días en los que no paras.
+0|pend|Llamadas. Mensajes. Tareas. Pendientes.|Tienes llamadas, tienes mensajes, tareas, deberes, pendientes.
+0|bateria|Llega la noche y estás cansado.|Llega la noche y lamentablemente estás cansado, demasiado cansado.
+0|blanco|¿Qué avanzaste? En blanco.|Y si alguien te pregunta qué fue lo que avanzaste, te quedas en blanco.
+0|type|Hoy, la pregunta que uso para que no me pase.|Así que hoy te voy a dar una pregunta que uso para que eso no me suceda.
+1|words|Estar ocupado se siente bien. Te sientes útil.|Estar ocupado se siente bien digamos, te sientes como útil,
+1|words|Pero hay una diferencia simple.|pero hay una diferencia súper sencilla, súper simple.
+1|vs|Ocupado es llenar el día. Avanzar es que algo cambie.|Ocupado es llenar el día, avanzar es hacer algo que cambie, algo cambió.
+1|lleno|Puedes llenar el día y que nada cambie.|Puedes llenar el día y que nada cambia, que siga siendo todo lo mismo.
+2|qmark|¿Por qué pasa?|¿Por qué pasa?
+2|ruido|Lo que llega en el momento se ve más.|Porque lo que llega en el momento se ve más, un mensaje se ve, una llamada se ve,
+2|silencio|Lo que más vale casi nunca te escribe.|lo que más vale casi nunca te escribe, no suena, no avisa,
+2|despues|Así que lo dejas para después.|así que lo dejas para después.
+2|inv|Pero eso no es lo peor.|Pero eso no es lo peor.
+3|key:el mismo|Lo peor: el cansancio es el mismo.|Lo peor es que el cansancio es el mismo.
+3|dosdias|Un día ocupado y un día que avanza cansan igual.|Un día ocupado y un día que avanza, cansa igual.
+3|queda|La diferencia es lo que queda.|La diferencia es lo que queda. Uno deja más pendientes y el segundo deja algo hecho de verdad.
+4|words|Ahora, la pregunta.|Ok, ahora la pregunta.
+4|manana|Cada mañana, antes de ver los mensajes:|Cada mañana, antes de que tomes el móvil y veas los mensajes, deberías preguntarte esto.
+4|quote:Si hoy solo hago una cosa, ¿cuál cambia más?|Si hoy solo hago una cosa, ¿cuál cambia más?|Si hoy solo hago una cosa, una cosa. ¿Qué cosa haría para hacer que las cosas cambien lo más que se pueda?
+4|key:primero|Haz esa cosa primero. Punto.|Haz esa cosa primero. Punto.
+4|orden|Antes que los mensajes. Antes que las llamadas.|Antes que los mensajes, antes que las llamadas,
+4|espera|Lo demás puede esperar una hora.|lo demás, créeme que puede esperar una hora. Créeme, casi siempre, a no ser que realmente sea una emergencia.
+5|type|Haz esto mañana.|haz esto mañana.
+5|nota|Escribe una sola cosa. Y hazla primero.|Antes de ver el teléfono, escribe una sola cosa la que más cambia algo y hazla primero.
+6|words|Una pregunta.|Una pregunta. Déjalo en comentario
+6|type|¿Qué hiciste hoy que cambió algo?|¿Qué hiciste hoy? ¿Qué sientes que cambió algo? O a alguien.
+6|word|Escribe solo una cosa.|Escribe solo una cosa.
+7|strike:mucho>lo que vale|Hacer mucho no cambia nada. Hacer lo que vale, sí.|Y recuerda, hacer mucho no cambia nada. Hacer lo que vale, sí.
+7|end|Simple.|Simple.
