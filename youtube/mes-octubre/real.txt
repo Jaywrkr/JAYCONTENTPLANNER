@@ -1,0 +1,85 @@
+0|split|Le di mi mes entero a dos IA.|le di mi mes entero a dos inteligencias artificiales
+0|list:Mi agenda.,Mi sueño.,Mi contenido.|Mi agenda. Mi sueño. Mi contenido.|le di mi agenda, cómo dormía, mi contenido y muchas cosas más.
+0|words|Una me dijo algo que no quería escuchar.|Una de ellas me dijo algo que realmente no quería escuchar
+0|words|La otra se equivocó.|y la otra se equivocó.
+0|words|¿A cuál le hago caso?|Y al final tengo que elegir a cuál le tengo que hacer caso.
+0|big|Vamos.|Vamos.
+1|words|“Fue un mes intenso.” Y ya.|Cada fin de mes digo, fue un mes súper, súper intenso. y ya, con eso queda todo, no reviso nada.
+1|words|Les pedí una sola cosa: la verdad.|Así que por esta ocasión les di todo a estas días y les pedí una sola cosa. La verdad.
+1|rules|Una habla. Yo respondo.|Digamos que puse reglas, las reglas son simples. Cada vez que una diga algo, yo respondo
+1|vdemo|Acierto o fallo.|y le doy un veredicto. Acierto o fallido.
+2|words|Los números. Sin opinión.|Antes de que hablen los números sin opinión,
+2|num:37|reuniones|octubre 37 reuniones,
+2|num:440|tareas en mi agenda|440 tareas en mi agenda,
+2|num:6|episodios grabados|seis episodios grabados,
+2|num:517000|reproducciones en Instagram|más de 500,000 reproducciones en Instagram
+2|bar61|sueño|y mi sueño 61%.
+2|keep61|Guarda ese número.|Guarda ese último número. Vamos a volver a él.
+3|round:RONDA 1 · CLAUDE|Claude empezó fuerte.|Claude empezó fuerte.
+3|grid440|423 de 440 tareas · 96 %|440 tareas. ¿Cuántas hice? 423 97%.
+3|list:Francés.,Leer.,Entrenar.,Publicar.|Francés. Leer. Entrenar. Publicar.|francés, casi todos los días. leer todos los días, entrenar casi todos los días. publicar en redes sociales casi todos los días
+3|words|“Voy bien.”|y pensé, ok, voy bien, estoy muy bien.
+3|words|Hasta que vi el otro dato.|Hasta que vi el otro dato
+3|nights|noches de buen sueño · 0 de 29|En todo el mes, ni una sola noche de sueño realmente bueno,
+3|big|Ni una.|ni una.
+3|strike:todo.>conmigo.|Cumplí con|Cumplí con todo, menos conmigo,
+3|words|¿De dónde sacas el tiempo? De la noche.|porque cuando el día no alcanza, ¿de dónde sacas tiempo? De la noche.
+3|verdict:A:C|Claude: acierto.|Así que Cloud acertó.
+3|words|¿Qué voy a cambiar?|¿Y qué voy a cambiar?
+3|words|Si no descansas, nada de eso funciona.|Lo primero que comprendí es que puedo planificar el mes perfecto, puedo tener todo organizado, pero si no descanso, nada de eso funciona.
+3|words|Llegas a todo. Pero llegas cansado.|Llegas a todo, pero llegas cansado.
+3|list:Hora fija.,Teléfono fuera del cuarto.|Hora fija. Teléfono fuera del cuarto.|Así que algo simple Pongo una hora fija para dormir y el teléfono se queda afuera del cuarto.
+3|phone|Si está a la mano, lo vas a tomar.|Lo mismo que digo en el episodio del teléfono, si está a la mano, lo vas a tomar, así que lejos.
+3|type|Mucha gente vio. Ver no es conocer.|La segunda de Cloud, mucha gente vio mi contenido este mes, pero ver no es conocer y es verdad.
+3|list:Una frase.,Una palabra tachada.,Fondo negro.|Una frase. Una palabra tachada. Fondo negro.|Los posts se ven simples, una frase, una palabra tachada, un fondo negro,
+3|words|No salen de un lugar perfecto.|pero no salen de un lugar perfecto. Salen de días con mil pendientes de noches en las que dije, ok, mañana voy a empezar y no empecé.
+3|words|Lo estoy intentando. En voz alta.|No soy alguien que ya lo resolvió todo. Soy alguien que lo está intentando. Y en este caso, en voz alta.
+3|words|Cada martes, aquí.|Y eso es lo que cuento cada martes aquí, lo que no cabe tal vez en una imagen.
+3|verdict:A:C|Acierto.|Acierto.
+3|post|Mi post más visto: +100.000 personas.|mi post más visto del mes, dos palabras, una tachada más de 100,000 personas.
+3|words|Todos tenemos un “después” guardado.|¿Por qué? Porque todos tenemos un después guardado.
+3|despues|Después. Después. Después.|Después empiezo a entrenar, después arranco el proyecto, después hablo con esa persona. Después, después, después.
+3|strike:Después>Ahora.|Te reconoces.|Y cuando lo ves tachado, te vuelve un poquito, porque te reconoces.
+3|words|Entre menos le pones, más fuerte llega.|Es lo más simple que he publicado sin explicación, sin nada extra, así que entre menos le pones, digamos que más fuerte llega.
+3|type|440 tareas no siempre es disciplina.|La tercera de Clode me la dijo así. 440 tareas, no siempre es disciplina.
+3|words|Hacer más es fácil.|Y me quedé pensando. ¿Por qué hacer más es fácil, agregas una tarea, la tachas, te sientes bien,
+3|words|Quitar cuesta.|pero más bien quitar eso es lo que cuesta. Cada tarea que quitas se siente como que me rindo.
+3|words|Lo difícil es elegir qué no vas a hacer.|Y no, lo difícil no es cumplir, es de elegir qué no vas a hacer.
+3|verdict:A:C|Acierto. Y duele.|Acierto Y duele.
+4|round:RONDA 2 · CHATGPT|Ahora, ChatGPT.|Ahora vamos con chat GPT. Y lo primero que me dijo no me lo esperaba.
+4|gpt|Mucha actividad, poco tiempo propio.|Me dijo, tienes mucha actividad, pero poco tiempo propio
+4|big|No es verdad.|Y no, no es verdad.
+4|split2|Las dos miraron el calendario equivocado.|Aquí viene lo interesante. Claude al principio me dijo lo mismo, las dos miraron el calendario equivocado, el del trabajo, donde solo hay reuniones.
+4|words|Mi vida real está en otro lado.|Mi vida real está en otro lado, y eso me enseñó algo.
+4|half|La IA solo ve lo que le muestras.|La inteligencia artificial solo ve lo que le muestras. Si le das la mitad, te responde sobre la mitad.
+4|verdict:F:G|ChatGPT: fallo.|En este caso, chat GPT falló.
+4|gpt|Tu creatividad supera tu ejecución.|La segunda de chat GPT y esta sí, esta es la más cierta de todas.
+4|list:Una app.,Un juego.,Un proyecto nuevo.|Una app. Un juego. Un proyecto nuevo.|Me encantan las ideas, me encanta una aplicación, me encantan los juegos, estoy haciendo proyectos nuevos, todas me emocionan por igual.
+4|words|Cada idea nueva le roba espacio a la anterior.|El problema es este. Cada idea nueva le roba espacio al anterior.
+4|ten|10 empezadas · 0 terminadas|Empiezas 10 cosas, avanzas un poquito en cada una y al final del mes ninguna está terminada.
+4|words|Voy a pausar.|Así que voy a pausar,
+4|words|Y definir en qué enfocarme.|Aún no defino qué, pero voy a pausar por un momento y definir cuáles son las cosas que realmente tengo que enfocarme.
+4|words|No las mato. Las guardo.|No las mato, simplemente las guardo.
+4|words|Una idea terminada vale más que diez empezadas.|Porque una idea terminada vale más que 10 empezadas, así de sencillo.
+4|verdict:A:G|Acierto.|Así que acierto.
+4|gpt|La constancia ya está dando resultados.|La última de chat GPT fue, digamos la más amable que la constancia ya está dando resultados
+4|words|Lo hice antes de sentirme listo.|y con eso me quedo de octubre. Lo hice antes de sentirme listo.
+4|zero|episodios grabados sintiéndome listo|Seis episodios grabados, ¿Sabes cuántos grabé sintiéndome preparado? Ninguno.
+4|words|Todavía estaría esperando.|Si hubiera esperado el momento perfecto, todavía estaría esperando.
+4|list:Micrófono perfecto.,Luz perfecta.,Guion perfecto.|No existe.|El micrófono perfecto, la luz perfecta, el guion perfecto no existe.
+4|words|No necesitas estar listo. Necesitas empezar.|No necesitas estar listo, necesitas empezar.
+4|verdict:A:G|Acierto.|Acierto.
+5|score|Marcador final.|marcador final. Cloud, tres aciertos, chat GPT, dos aciertos y un fallo.
+5|words|Ahora me toca elegir.|Y ahora me toca elegir.
+5|vs|¿Cuál elijo?|chat GPT me dice tres bloques de 90 minutos por semana para mis proyectos, mientras que Claude me dice menos tareas y una hora fija para dormir.
+5|big|Dormir.|Y en este caso, el hijo dormir.
+5|words|Ya demostré que cumplo: 96 %.|¿Por qué? Porque ya demostré que cumplo. 96% de las cosas que tengo que hacer las hago.
+5|words|Falta demostrar que puedo descansar.|Lo que no he demostrado es que puedo descansar.
+5|bar70|sueño · meta de noviembre|¿Te acuerdas del número que pedí guardar? 61%. En noviembre lo quiero arriba de 70.
+5|list:Menos tareas.,Hora fija.,Teléfono lejos.|Menos tareas. Hora fija. Teléfono lejos.|Menos tareas, una hora fija para dormir el teléfono lejos.
+6|words|A fin de mes, otra vez.|A fines de noviembre, les voy a dar mis datos otra vez a las dos días. Y vamos a ver si lo logré o no.
+6|words|Ahora te toca a ti.|Ahora te toca a ti.
+6|type|¿Qué te diría una IA de tu mes?|Si una inteligencia artificial revisara tu mes, qué crees que te diría
+6|words|Una frase. En comentarios.|Déjalo en los comentarios, solo una frase. Yo los voy a leer.
+6|words|Nos vemos el próximo mes.|Nos vemos el próximo mes.
+6|end|Simple.|chimpe.
